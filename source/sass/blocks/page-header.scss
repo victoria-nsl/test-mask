@@ -1,0 +1,156 @@
+.page-header {
+  position: relative;
+}
+
+.page-header__toggle {
+  display: none;
+}
+
+//Верхнее меню
+.page-header__wrapper-navigation-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 32px;
+  padding-bottom: 41px;
+  padding-right: 4px;
+}
+
+//Поле поиска
+.page-header__form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 295px;
+}
+
+.page-header__button-search {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.page-header__button-search svg {
+  width: 25px;
+  height: 25px;
+
+  stroke: $black;
+  fill: $white;
+}
+
+.page-header__form input {
+  width: 250px;
+
+  font: inherit;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: $grey;
+
+  border: none;
+  border-bottom: 1px solid $grey;
+
+  &::placeholder {
+    opacity: 0.7;
+  }
+}
+
+//Логотип компании
+.page-header__logo-link {
+  position: absolute;
+  top: 97px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 160px;
+  height: 50px;
+}
+
+
+//Пользовательское меню
+.page-header__list-navigation-user {
+  @include reset-style-list;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 22px;
+  row-gap: 22px;
+  width: 125px;
+  box-sizing: border-box;
+}
+
+.page-header__link-navigation-user--login svg {
+  width: 22px;
+  height: 25px;
+
+  stroke: $black;
+  fill: $white;
+}
+
+.page-header__link-navigation-user--like svg {
+  width: 28px;
+  height: 25px;
+
+  stroke: $black;
+  fill: $white;
+}
+
+.page-header__link-navigation-user--cart svg {
+  width: 23px;
+  height: 25px;
+
+  stroke: $black;
+  fill: $white;
+}
+
+.page-header__link-navigation-user--cart {
+  position: relative;
+}
+
+.page-header__cart-counter {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 16px;
+  height: 16px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: $white;
+
+  background-color: $black;
+  border-radius: 50%;
+}
+
+//Нижнее меню
+.page-header__list-navigation-site {
+  @include reset-style-list;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: center;
+  column-gap: 30px;
+  row-gap: 30px;
+  width: 100%;
+  padding-top: 27px;
+}
+
+.page-header__item-navigation-site:nth-child(3) {
+  margin-right: 258px;
+}
+
+.page-header__item-navigation-site a {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: $grey;
+}
