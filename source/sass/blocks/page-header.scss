@@ -4,6 +4,84 @@
 
 .page-header__toggle {
   display: none;
+
+  @media (max-width: $mobile-max-width) {
+    position: absolute;
+    top: 16px;
+    left: 0;
+
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.page-header--closed .page-header__toggle {
+  @media (max-width: $mobile-max-width) {
+    width: 28px;
+    height: 20px;
+    padding: 0;
+
+    background-color: transparent;
+    border: none;
+  }
+}
+
+.page-header--closed .page-header__toggle::after {
+  @media (max-width: $mobile-max-width) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+
+    width: 28px;
+    height: 2px;
+
+    background-color: $black;
+    border-radius: 3px;
+    box-shadow: 0 10px 0 0 $black, 0 20px 0 0 $black;
+  }
+}
+
+.page-header--opened .page-header__toggle {
+  @media (max-width: $mobile-max-width) {
+    width: 23px;
+    height: 23px;
+
+    padding: 0;
+
+    background-color: transparent;
+    border: none;
+  }
+}
+
+.page-header--opened .page-header__toggle::after {
+  @media (max-width: $mobile-max-width) {
+    position: absolute;
+    bottom: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    content: "";
+
+    width: 30px;
+    height: 3px;
+
+    background-color: $black;
+  }
+}
+
+.page-header--opened .page-header__toggle::before {
+  @media (max-width: $mobile-max-width) {
+    position: absolute;
+    bottom: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    content: "";
+
+    width: 30px;
+    height: 3px;
+
+    background-color: $black;
+  }
 }
 
 //Верхнее меню
@@ -14,6 +92,11 @@
   padding-top: 32px;
   padding-bottom: 41px;
   padding-right: 4px;
+
+  @media (max-width: $mobile-max-width) {
+    padding-top: 16px;
+    padding-right: 0;
+  }
 }
 
 //Поле поиска
@@ -22,12 +105,19 @@
   align-items: center;
   justify-content: space-between;
   width: 295px;
+
+  @media (max-width: $mobile-max-width) {
+    width: 22px;
+    margin-left: 44px;
+  }
 }
 
 .page-header__button-search {
   background-color: transparent;
   border: none;
   padding: 0;
+
+  cursor: pointer;
 }
 
 .page-header__button-search svg {
@@ -53,6 +143,10 @@
   &::placeholder {
     opacity: 0.7;
   }
+
+  @media (max-width: $mobile-max-width) {
+    display: none;
+  }
 }
 
 //Логотип компании
@@ -62,10 +156,22 @@
   left: 50%;
   transform: translateX(-50%);
 
-  width: 160px;
-  height: 50px;
+  cursor: pointer;
+
+  @media (max-width: $mobile-max-width) {
+    top: 16px;
+  }
 }
 
+.page-header__logo-link svg {
+  width: 160px;
+  height: 50px;
+
+  @media (max-width: $mobile-max-width) {
+    width: 77px;
+    height: 24px;
+  }
+}
 
 //Пользовательское меню
 .page-header__list-navigation-user {
@@ -77,6 +183,19 @@
   row-gap: 22px;
   width: 125px;
   box-sizing: border-box;
+
+  @media (max-width: $mobile-max-width) {
+    width: 71px;
+    justify-content: space-between;
+    column-gap: 0;
+    row-gap: 0;
+  }
+}
+
+.page-header__link-navigation-user--login {
+  @media (max-width: $mobile-max-width) {
+    display: none;
+  }
 }
 
 .page-header__link-navigation-user--login svg {
@@ -93,6 +212,15 @@
 
   stroke: $black;
   fill: $white;
+
+  @media (max-width: $mobile-max-width) {
+    width: 24px;
+    height: 22px;
+  }
+}
+
+.page-header__link-navigation-user--cart {
+  position: relative;
 }
 
 .page-header__link-navigation-user--cart svg {
@@ -101,15 +229,16 @@
 
   stroke: $black;
   fill: $white;
-}
 
-.page-header__link-navigation-user--cart {
-  position: relative;
+  @media (max-width: $mobile-max-width) {
+    width: 20px;
+    height: 22px;
+  }
 }
 
 .page-header__cart-counter {
   position: absolute;
-  top: -4px;
+  top: -16px;
   right: -4px;
   z-index: 2;
 
@@ -141,10 +270,45 @@
   row-gap: 30px;
   width: 100%;
   padding-top: 27px;
+
+  @media (max-width: $mobile-max-width) {
+    flex-direction: column;
+    align-items: center;
+    column-gap: 0;
+    row-gap: 0;
+  }
+}
+
+.page-header--closed .page-header__list-navigation-site {
+  @media (max-width: $mobile-max-width) {
+    display: none;
+  }
+}
+
+.page-header--opened .page-header__list-navigation-site {
+  @media (max-width: $mobile-max-width) {
+    display: block;
+    width: 100%;
+    height: calc(100vh - 27px);
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+
+.page-header__item-navigation-site {
+  @media (max-width: $mobile-max-width) {
+    width: 100%;
+    margin-bottom: 20px;
+    border-bottom: 1px solid $grey;
+  }
 }
 
 .page-header__item-navigation-site:nth-child(3) {
   margin-right: 258px;
+
+  @media (max-width: $mobile-max-width) {
+    margin-right: 0;
+  }
 }
 
 .page-header__item-navigation-site a {
