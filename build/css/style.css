@@ -195,7 +195,8 @@ img {
   position: absolute;
   top: 97px;
   left: 50%;
-  transform: translateX(-50%); }
+  transform: translateX(-50%);
+  cursor: pointer; }
   @media (max-width: 1149px) {
     .page-header__logo-link {
       top: 16px; } }
@@ -333,7 +334,8 @@ img {
 .page-header__toggle:hover,
 .page-header__button-search:hover,
 .page-header__link-navigation-user:hover svg,
-.page-header__form input:hover {
+.page-header__form input:hover,
+.page-header__logo-link:hover {
   opacity: 0.6; }
 
 .page-header__link-navigation-site:hover {
@@ -342,7 +344,8 @@ img {
 .page-header__toggle:focus,
 .page-header__button-search:focus,
 .page-header__link-navigation-user:focus,
-.page-header__link-navigation-site:focus {
+.page-header__link-navigation-site:focus,
+.page-header__logo-link:focus {
   outline: 2px solid #8da399;
   outline-offset: 2px; }
 
@@ -350,6 +353,7 @@ img {
 .page-header__button-search:active,
 .page-header__link-navigation-user:active,
 .page-header__link-navigation-site:active,
-.page-header__form input:active {
+.page-header__form input:active,
+.page-header__logo-link:active {
   outline: none;
   opacity: 0.3; }
