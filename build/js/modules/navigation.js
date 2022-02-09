@@ -9,13 +9,13 @@ const menu = document.querySelector('.page-header');
 const closeMenu = () => {
   menu.classList.add('page-header--closed');
   menu.classList.remove('page-header--opened');
-  page.classList.remove('page-no-scroll');
+  page.classList.remove('page-body--no-scroll');
 };
 
 const openMenu = () => {
   menu.classList.remove('page-header--closed');
   menu.classList.add('page-header--opened');
-  page.classList.add('page-no-scroll');
+  page.classList.add('page-body--no-scroll');
 };
 
 if (menu && page.clientWidth < WIDTH_DESKTOP) {

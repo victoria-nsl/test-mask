@@ -9,3 +9,8 @@
     padding: 0 16px;
   }
 }
+
+.page-body--no-scroll {
+  height: 100vh;
+  overflow: hidden;
+}
