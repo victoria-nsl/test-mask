@@ -7,6 +7,7 @@
   display: flex;
   justify-content: space-between;
   width: 555px;
+  margin: 0;
   padding: 45px 30px;
   box-sizing: border-box;
 
@@ -17,6 +18,20 @@
 
   background-color: $black;
   opacity: 0.8;
+
+  @media (max-width: $mobile-max-width) {
+    position: static;
+
+    width: 100%;
+    padding: 0;
+    margin-bottom: 24px;
+
+    font-size: 26px;
+    line-height: 30px;
+    color: $black;
+
+    background-color: transparent;
+  }
 }
 
 //Кнопка Купить
@@ -34,4 +49,8 @@
   background-color: transparent;
   border: 1px solid $black;
   cursor: pointer;
+
+  @media (max-width: $mobile-max-width) {
+    padding: 19px 19px 17px 19px;
+  }
 }

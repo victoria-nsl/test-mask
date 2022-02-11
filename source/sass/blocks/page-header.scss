@@ -1,6 +1,11 @@
 .page-header {
   position: relative;
+
   margin-bottom: 50px;
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 29px;
+  }
 }
 
 //Кнопка меню
@@ -9,10 +14,12 @@
 
   @media (max-width: $mobile-max-width) {
     position: absolute;
-    top: 16px;
+    top: 22px;
     left: 0;
+    z-index: 2;
 
     display: block;
+
     cursor: pointer;
   }
 }
@@ -103,8 +110,8 @@
 
   @media (max-width: $mobile-max-width) {
     position: relative;
-    padding-top: 16px;
-    padding-right: 0;
+    padding-top: 18px;
+    padding-bottom: 10px;
   }
 }
 
@@ -184,7 +191,7 @@
   cursor: pointer;
 
   @media (max-width: $mobile-max-width) {
-    top: 16px;
+    top: 18px;
   }
 }
 
@@ -212,7 +219,6 @@
 
   @media (max-width: $mobile-max-width) {
     width: 71px;
-    justify-content: space-between;
     column-gap: 0;
     row-gap: 0;
   }
@@ -247,6 +253,10 @@
 
 .page-header__link-navigation-user--cart {
   position: relative;
+
+  @media (max-width: $mobile-max-width) {
+    margin-left: 15px;
+  }
 }
 
 .page-header__link-navigation-user--cart svg {
@@ -257,8 +267,7 @@
   fill: $white;
 
   @media (max-width: $mobile-max-width) {
-    width: 20px;
-    height: 22px;
+    width: 22px;
   }
 }
 
@@ -282,6 +291,11 @@
 
   background-color: $black;
   border-radius: 50%;
+
+  @media (max-width: $mobile-max-width) {
+    top: -13px;
+    right: -8px;
+  }
 }
 
 //Нижнее меню
@@ -331,6 +345,7 @@
   @media (max-width: $mobile-max-width) {
     width: 100%;
     margin-bottom: 20px;
+
     border-bottom: 1px solid $grey;
   }
 }
