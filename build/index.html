@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
   <link rel="preload" href="fonts/helvetica-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body class="page-body">
   <header class="page-header page-header--closed page-header--nojs">
     <nav class="page-header__navigation">
@@ -79,139 +81,144 @@
     </nav>
   </header>
   <main class="page-main">
-    <ul class="page-main__list-breadcrumb">
-      <li class="page-main__item-breadcrumb"><a href="#">Главная</a></li>
-      <li class="page-main__item-breadcrumb page-main__item-breadcrumb--active">Корзина</li>
-    </ul>
-    <h1>Корзина</h1>
-    <p>Есть аккаунт?</p>
-    <a class="page-main__link-login" href="#">Войти</a>
-    <section class="contacts">
-      <h2>Адрес</h2>
-      <p>г. Санкт-Петербург, пр. Просвещения, д. 99, кв. 152</p>
-      <div class="contacts__wrapper-img">
-        <picture>
-          <source type="image/webp" media="(max-width: 1149px)" srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 1150px)" srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
+    <div class="page-main__inner">
+      <ul class="page-main__list-breadcrumb">
+        <li class="page-main__item-breadcrumb" data-slash="/"><a class="page-main__link-breadcrumb" href="#">Главная</a></li>
+        <li class="page-main__item-breadcrumb page-main__item-breadcrumb--active">Корзина</li>
+      </ul>
+      <h1>Корзина</h1>
+      <p>Есть аккаунт? <a class="page-main__link-login" href="#">Войти</a></p>
 
-          <source media="(max-width: 1149px)" srcset="img/map-mobile.png 1x, img/map-mobile@2x.png 2x">
-          <img width="555" height="700" src="img/map-desktop.png" srcset="img/map-desktop@2x.png 2x" alt="Карта г. Санкт-Петербург">
-        </picture>
-      </div>
-    </section>
-    <form class="form-order" name="order" method="get" action="https://echo.htmlacademy.ru">
-      <fieldset class="info-user">
-        <legend class="visually-hidden">Информация о покупателе и типе упаковки</legend>
-        <ul class="info-user__list">
-          <li class="info-user__item">
-            <label class="visually-hidden" for="customer-name"> Имя покупателя </label>
-            <input id="customer-name" type="text" name="customer-name" placeholder="Ваше Имя" pattern="^[A-Za-zА-Яа-яЁё\s]+$" required="">
-          </li>
-          <li class="info-user__item">
-            <label class="visually-hidden" for="tel">Телефон покупателя</label>
-            <input id="tel" type="tel" name="tel" placeholder="Ваш  телефон" pattern="^\+?[\d()\- ]+$" required="">
-          </li>
-          <li class="info-user__item">
-            <label class="visually-hidden" for="email">Email покупателя</label>
-            <input id="email" type="email" name="email" placeholder="Ваш  Email" required="">
-          </li>
-          <li class="info-user__item">
-            <label class="visually-hidden" for="package-type">
-              Тип упаковки
-            </label>
-            <select name="package-type" id="package-type" required="">
-              <option value="">Тип упаковки</option>
-              <option value="without-package">без упаковки</option>
-              <option value="standard-package">стандартная</option>
-              <option value="gift-package">подарочная</option>
-            </select>
-          </li>
-          <li class="info-user__item">
-            <label class="visually-hidden" for="comments-text">Текст комментария</label>
-            <textarea id="comments-text" name="comments" placeholder="Введите комментарий"></textarea>
-          </li>
-        </ul>
-      </fieldset>
+      <section class="contacts">
+        <h2>Адрес</h2>
+        <p>г. Санкт-Петербург, пр. Просвещения, д. 99, кв. 152</p>
+        <div class="contacts__wrapper-img">
+          <picture>
+            <source type="image/webp" media="(max-width: 1149px)" srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1150px)" srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
 
-      <fieldset class="product">
-        <legend>Выбранные товары:</legend>
-        <ul class="product__list">
-          <li class="product__item">
-            <div class="product__wrapper-img">
-              <picture>
-                <source type="image/webp" media="(max-width: 1149px)" srcset="img/product-desktop.webp 1x, img/product-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 1150px)" srcset="img/product-desktop.webp 1x, img/product-desktop@2x.webp 2x">
+            <source media="(max-width: 1149px)" srcset="img/map-mobile.png 1x, img/map-mobile@2x.png 2x">
+            <img width="555" height="700" src="img/map-desktop.png" srcset="img/map-desktop@2x.png 2x" alt="Карта г. Санкт-Петербург">
+          </picture>
+        </div>
+      </section>
+      <form class="form-order" name="order" method="get" action="https://echo.htmlacademy.ru">
+        <fieldset class="info-user">
+          <legend class="visually-hidden">Информация о покупателе и типе упаковки</legend>
+          <ul class="info-user__list">
+            <li class="info-user__item info-user__item--name">
+              <label class="visually-hidden" for="customer-name"> Имя покупателя </label>
+              <input id="customer-name" type="text" name="customer-name" placeholder="Ваше Имя" pattern="^[A-Za-zА-Яа-яЁё\s]+$" required="">
+            </li>
+            <li class="info-user__item info-user__item--tel">
+              <label class="visually-hidden" for="tel">Телефон покупателя</label>
+              <input id="tel" type="tel" name="tel" placeholder="Ваш  Телефон" pattern="^\+?[\d()\- ]+$" required="">
+            </li>
+            <li class="info-user__item">
+              <label class="visually-hidden" for="email">Email покупателя</label>
+              <input id="email" type="email" name="email" placeholder="Ваш  Email" required="">
+            </li>
+            <li class="info-user__item info-user__item--type">
+              <label class="visually-hidden" for="package-type">
+                Тип упаковки
+              </label>
+              <select name="package-type" id="package-type" required="">
+                <option value="">Тип упаковки</option>
+                <option value="without-package">без упаковки</option>
+                <option value="standard-package">стандартная</option>
+                <option value="gift-package">подарочная</option>
+              </select>
+            </li>
+            <li class="info-user__item">
+              <label class="visually-hidden" for="comments-text">Текст комментария</label>
+              <textarea id="comments-text" name="comments" placeholder="Введите комментарий"></textarea>
+            </li>
+          </ul>
+        </fieldset>
 
-                <source media="(max-width: 1149px)" srcset="img/product-mobile.png 1x, img/product-mobile@2x.png 2x">
-                <img width="150" height="150" src="img/product-desktop.png" srcset="img/product-desktop@2x.png 2x" alt="Фотография товара">
-              </picture>
-            </div>
-            <div class="product__wrapper-description">
-              <h2>Товар 1</h2>
-              <p>Описание товара, которое может быть длинным</p>
-              <div class="product__quantity">
-                <button class="product__button-plus" type="button">-</button>
-                <input type="text" name="product1" value="1">
-                <button class="product__button-minus" type="button">+</button>
+        <fieldset class="product">
+          <legend>Выбранные товары:</legend>
+          <ul class="product__list">
+            <li class="product__item">
+              <div class="product__wrapper-img">
+                <picture>
+                  <source type="image/webp" media="(max-width: 1149px)" srcset="img/product-desktop.webp 1x, img/product-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 1150px)" srcset="img/product-desktop.webp 1x, img/product-desktop@2x.webp 2x">
+
+                  <source media="(max-width: 1149px)" srcset="img/product-mobile.png 1x, img/product-mobile@2x.png 2x">
+                  <img width="150" height="150" src="img/product-desktop.png" srcset="img/product-desktop@2x.png 2x" alt="Фотография товара">
+                </picture>
               </div>
-            </div>
-            <div class="product__wrapper-total">
-              <p>1090 руб.</p>
-              <button class="product__button-delete" type="button">Удалить</button>
-            </div>
-          </li>
-          <li class="product__item">
-            <div class="product__wrapper-img">
-              <picture>
-                <source type="image/webp" media="(max-width: 1149px)" srcset="img/product-desktop.webp 1x, img/product-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 1150px)" srcset="img/product-desktop.webp 1x, img/product-desktop@2x.webp 2x">
-
-                <source media="(max-width: 1149px)" srcset="img/product-mobile.png 1x, img/product-mobile@2x.png 2x">
-                <img width="150" height="150" src="img/product-desktop.png" srcset="img/product-desktop@2x.png 2x" alt="Фотография товара">
-              </picture>
-            </div>
-            <div class="product__wrapper-description">
-              <h2>Товар 2</h2>
-              <p>Описание товара, которое может быть длинным</p>
-              <div class="product__quantity">
-                <button class="product__button-plus" type="button">-</button>
-                <input type="text" name="product2" value="1">
-                <button class="product__button-minus" type="button">+</button>
+              <div class="product__wrapper-description">
+                <h2>Товар 1</h2>
+                <p>Описание товара, которое может быть длинным</p>
+                <div class="product__quantity">
+                  <button class="product__button-quantity product__button-quantity--minus" type="button"></button>
+                  <input type="text" name="product1" value="1">
+                  <button class="product__button-quantity product__button-quantity--plus" type="button"></button>
+                </div>
               </div>
-            </div>
-            <div class="product__wrapper-total">
-              <p>700 руб.</p>
-              <button class="product__button-delete" type="button">Удалить</button>
-            </div>
-          </li>
-          <li class="product__item">
-            <div class="product__wrapper-img">
-              <picture>
-                <source type="image/webp" media="(max-width: 1149px)" srcset="img/product-desktop.webp 1x, img/product-desktop@2x.webp 2x">
-                <source type="image/webp" media="(min-width: 1150px)" srcset="img/product-desktop.webp 1x, img/product-desktop@2x.webp 2x">
-
-                <source media="(max-width: 1149px)" srcset="img/product-mobile.png 1x, img/product-mobile@2x.png 2x">
-                <img width="150" height="150" src="img/product-desktop.png" srcset="img/product-desktop@2x.png 2x" alt="Фотография товара">
-              </picture>
-            </div>
-            <div class="product__wrapper-description">
-              <h2>Товар 3</h2>
-              <p>Описание товара, которое может быть длинным</p>
-              <div class="product__quantity">
-                <button class="product__button-plus" type="button">-</button>
-                <input type="text" name="product3" value="1">
-                <button class="product__button-minus" type="button">+</button>
+              <div class="product__wrapper-total">
+                <p>1090 руб.</p>
+                <button class="product__button-delete" type="button">Удалить</button>
               </div>
-            </div>
-            <div class="product__wrapper-total">
-              <p>2000 руб.</p>
-              <button class="product__button-delete" type="button">Удалить</button>
-            </div>
-          </li>
-        </ul>
-      </fieldset>
-    </form>
+            </li>
+            <li class="product__item">
+              <div class="product__wrapper-img">
+                <picture>
+                  <source type="image/webp" media="(max-width: 1149px)" srcset="img/product-mobile.webp 1x, img/product-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 1150px)" srcset="img/product-desktop.webp 1x, img/product-desktop@2x.webp 2x">
+
+                  <source media="(max-width: 1149px)" srcset="img/product-mobile.png 1x, img/product-mobile@2x.png 2x">
+                  <img width="150" height="150" src="img/product-desktop.png" srcset="img/product-desktop@2x.png 2x" alt="Фотография товара">
+                </picture>
+              </div>
+              <div class="product__wrapper-description">
+                <h2>Товар 2</h2>
+                <p>Описание товара, которое может быть очень-очень длинным</p>
+                <div class="product__quantity">
+                  <button class="product__button-quantity product__button-quantity--minus" type="button"></button>
+                  <input type="text" name="product2" value="1">
+                  <button class="product__button-quantity product__button-quantity--plus" type="button"></button>
+                </div>
+              </div>
+              <div class="product__wrapper-total">
+                <p>700 руб.</p>
+                <button class="product__button-delete" type="button">Удалить</button>
+              </div>
+            </li>
+            <li class="product__item">
+              <div class="product__wrapper-img">
+                <picture>
+                  <source type="image/webp" media="(max-width: 1149px)" srcset="img/product-desktop.webp 1x, img/product-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 1150px)" srcset="img/product-desktop.webp 1x, img/product-desktop@2x.webp 2x">
+
+                  <source media="(max-width: 1149px)" srcset="img/product-mobile.png 1x, img/product-mobile@2x.png 2x">
+                  <img width="150" height="150" src="img/product-desktop.png" srcset="img/product-desktop@2x.png 2x" alt="Фотография товара">
+                </picture>
+              </div>
+              <div class="product__wrapper-description">
+                <h2>Товар 3</h2>
+                <p>Короткое описание товара</p>
+                <div class="product__quantity">
+                  <button class="product__button-quantity product__button-quantity--minus" type="button"></button>
+                  <input type="text" name="product3" value="2">
+                  <button class="product__button-quantity product__button-quantity--plus" type="button"></button>
+                </div>
+              </div>
+              <div class="product__wrapper-total">
+                <p>2000 руб.</p>
+                <button class="product__button-delete" type="button">Удалить</button>
+              </div>
+            </li>
+          </ul>
+        </fieldset>
+        <p><span>Итог:</span><span>3790 руб.</span></p>
+        <button class="form-order__button-buy" type="submit">Купить</button>
+      </form>
+    </div>
   </main>
   <script type="module" src="js/main.js"></script>
 </body>
+
 </html>

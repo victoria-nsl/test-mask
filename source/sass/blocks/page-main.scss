@@ -1,0 +1,65 @@
+.page-main {
+  position: relative;
+}
+
+.page-main__inner {
+  width: 45.6%;
+}
+
+.page-main__list-breadcrumb {
+  @include reset-style-list;
+
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  margin-bottom: 50px;
+}
+
+.page-main__item-breadcrumb {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: $black;
+}
+
+.page-main__item-breadcrumb:first-child {
+  position: relative;
+  margin-right: 26px;
+}
+
+.page-main__item-breadcrumb:first-child::after {
+  content: attr(data-slash);
+  position: absolute;
+  top: 0;
+  right: -17px;
+
+  color: $grey;
+}
+
+.page-main__link-breadcrumb {
+  color: $grey;
+}
+
+.page-main h1 {
+  margin: 0;
+  margin-bottom: 15px;
+
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 46px;
+  color: $black;
+}
+
+.page-main p {
+  margin: 0;
+  margin-bottom: 30px;
+
+  font-size: 16px;
+  line-height: 120%;
+  color: $black;
+}
+
+.page-main__link-login {
+  text-decoration: underline;
+  color: $grey;
+}

@@ -1,0 +1,37 @@
+//Итог
+.form-order > p {
+  position: absolute;
+  top: 635px;
+  right: 0;
+
+  display: flex;
+  justify-content: space-between;
+  width: 555px;
+  padding: 45px 30px;
+  box-sizing: border-box;
+
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 46px;
+  color: $white;
+
+  background-color: $black;
+  opacity: 0.8;
+}
+
+//Кнопка Купить
+.form-order__button-buy {
+  width: 100%;
+  margin: 0;
+  padding: 24px;
+  box-sizing: border-box;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  color: $black;
+
+  background-color: transparent;
+  border: 1px solid $black;
+  cursor: pointer;
+}

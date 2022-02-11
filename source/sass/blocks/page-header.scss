@@ -1,5 +1,6 @@
 .page-header {
   position: relative;
+  margin-bottom: 50px;
 }
 
 //Кнопка меню
@@ -96,8 +97,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 32px;
-  padding-bottom: 41px;
+  padding-top: 34px;
+  padding-bottom: 42px;
   padding-right: 4px;
 
   @media (max-width: $mobile-max-width) {
@@ -176,7 +177,7 @@
 //Логотип компании
 .page-header__logo-link {
   position: absolute;
-  top: 97px;
+  top: 99px;
   left: 50%;
   transform: translateX(-50%);
 
@@ -200,6 +201,7 @@
 //Пользовательское меню
 .page-header__list-navigation-user {
   @include reset-style-list;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -334,7 +336,7 @@
 }
 
 .page-header__item-navigation-site:nth-child(3) {
-  margin-right: 258px;
+  margin-right: 241px;
 
   @media (max-width: $mobile-max-width) {
     margin-right: 0;
