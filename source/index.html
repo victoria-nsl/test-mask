@@ -44,16 +44,16 @@
           </li>
           <li class="page-header__item-navigation-user page-header__item-navigation-user--like">
             <a class="page-header__link-navigation-user page-header__link-navigation-user--like" href="#"
-              aria-label="Добавить в понравившиеся товары">
+              aria-label="Добавить в избранное">
               <svg role="img" width="28" height="25" aria-hidden="true">
                 <use xlink:href="img/sprite_auto.svg#icon-like"></use>
               </svg>
             </a>
           </li>
           <li class="page-header__item-navigation-user page-header__item-navigation-user--cart">
-            <a class="page-header__link-navigation-user page-header__link-navigation-user--cart" href="#"
+            <a class="page-header__link-navigation-user page-header__link-navigation-user--cart"
               aria-label="Открыть корзину">
-              <div class="page-header__cart-counter">4</div>
+              <div class="page-header__cart-counter">3</div>
               <svg role="img" width="23" height="25">
                 <use xlink:href="img/sprite_auto.svg#icon-cart"></use>
               </svg>
@@ -84,9 +84,10 @@
     </nav>
   </header>
   <main class="page-main">
-    <div class="page-main__inner" >
+    <div class="page-main__inner">
       <ul class="page-main__list-breadcrumb">
-        <li class="page-main__item-breadcrumb" data-slash="/" ><a class="page-main__link-breadcrumb" href="#">Главная</a></li>
+        <li class="page-main__item-breadcrumb" data-slash="/"><a class="page-main__link-breadcrumb" href="#">Главная</a>
+        </li>
         <li class="page-main__item-breadcrumb page-main__item-breadcrumb--active">Корзина</li>
       </ul>
       <h1>Корзина</h1>
@@ -108,7 +109,7 @@
           </picture>
         </div>
       </section>
-      <form class="form-order" name="order" method="get" action="https://echo.htmlacademy.ru">
+      <form class="form-order" name="order" method="post" action="https://echo.htmlacademy.ru">
         <fieldset class="info-user">
           <legend class="visually-hidden">Информация о покупателе и типе упаковки</legend>
           <ul class="info-user__list">
@@ -164,7 +165,7 @@
                 <p>Описание товара, которое может быть длинным</p>
                 <div class="product__quantity">
                   <button class="product__button-quantity product__button-quantity--minus" type="button"></button>
-                  <input type="text" name="product1" value="1">
+                  <input type="text" name="product1" value="1" data-price="1090">
                   <button class="product__button-quantity product__button-quantity--plus" type="button"></button>
                 </div>
               </div>
@@ -191,7 +192,7 @@
                 <p>Описание товара, которое может быть очень-очень длинным</p>
                 <div class="product__quantity">
                   <button class="product__button-quantity product__button-quantity--minus" type="button"></button>
-                  <input type="text" name="product2" value="1">
+                  <input type="text" name="product2" value="1" data-price="700">
                   <button class="product__button-quantity product__button-quantity--plus" type="button"></button>
                 </div>
               </div>
@@ -218,7 +219,7 @@
                 <p>Короткое описание товара</p>
                 <div class="product__quantity">
                   <button class="product__button-quantity product__button-quantity--minus" type="button"></button>
-                  <input type="text" name="product3" value="2">
+                  <input type="text" name="product3" value="2" data-price="1000">
                   <button class="product__button-quantity product__button-quantity--plus" type="button"></button>
                 </div>
               </div>
@@ -229,7 +230,7 @@
             </li>
           </ul>
         </fieldset>
-        <p><span>Итог:</span><span>3790 руб.</span></p>
+        <p><span>Итог:</span><span id="total-price">3790 руб.</span></p>
         <button class="form-order__button-buy" type="submit">Купить</button>
       </form>
     </div>

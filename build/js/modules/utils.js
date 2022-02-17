@@ -17,4 +17,5 @@ const setFocusTab = (evt, firstElement, lastElement) => {
     firstElement.focus();
   }
 };
-export {setFocusTab};
+
+export { setFocusTab };

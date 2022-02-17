@@ -370,7 +370,7 @@
 //hover
 .page-header__toggle:hover,
 .page-header__button-search:hover,
-.page-header__link-navigation-user:hover svg,
+.page-header__link-navigation-user[href]:hover svg,
 .page-header__form input:hover,
 .page-header__logo-link:hover {
   opacity: 0.6;
@@ -393,7 +393,7 @@
 //active
 .page-header__toggle:active,
 .page-header__button-search:active,
-.page-header__link-navigation-user:active,
+.page-header__link-navigation-user[href]:active,
 .page-header__link-navigation-site:active,
 .page-header__form input:active,
 .page-header__logo-link:active {
