@@ -45,7 +45,6 @@
   font-family: inherit;
   font-size: 16px;
   line-height: 120%;
-  color: $grey;
 
   border: none;
   border-bottom: 1px solid $grey;
@@ -57,10 +56,23 @@
   }
 }
 
+.info-user__item input {
+  color: $black;
+
+  &::placeholder {
+    color: $grey;
+  }
+}
+
 .info-user__item textarea {
   padding: 22px 0 0 0;
 
   line-height: 70%;
+  color: $black;
+
+  &::placeholder {
+    color: $grey;
+  }
 
   resize: none;
 }
@@ -68,7 +80,10 @@
 .info-user__item select {
   padding: 18px 0 9px 0;
 
+  color: $grey;
+
   appearance: none;
+  background-color: transparent;
 }
 
 .info-user__item--type {
@@ -80,10 +95,39 @@
   position: absolute;
   top: 25px;
   right: 0;
+  z-index: -1;
 
   width: 19px;
   height: 8px;
 
   background-image: url("../img/back-icon-arrow.svg");
   background-repeat: no-repeat;
+}
+
+//СТАЙЛГАЙД
+//hover
+.info-user__item input:hover::placeholder,
+.info-user__item select:hover,
+.info-user__item textarea:hover::placeholder {
+  color: $black;
+}
+
+//focus
+.info-user__item input:focus,
+.info-user__item select:focus,
+.info-user__item textarea:focus {
+  outline: 2px solid $grey-focus;
+  outline-offset: 2px;
+}
+
+//active
+.info-user__item input:active,
+.info-user__item textarea:active {
+  outline: none;
+  opacity: 0.3;
+}
+
+//invalid
+.info-user__item input[type="text"]:invalid {
+  color: $red;
 }

@@ -58,7 +58,6 @@
   line-height: 46px;
   color: $black;
 
-
   @media (max-width: $mobile-max-width) {
     order: 1;
     margin-bottom: 12px;
@@ -80,4 +79,27 @@
 .page-main__link-login {
   text-decoration: underline;
   color: $grey;
+}
+
+//СТАЙЛГАЙД
+//hover
+.page-main__link-breadcrumb:hover,
+.page-main__link-login:hover {
+  color: $black;
+}
+
+//focus
+
+.page-main__link-breadcrumb:focus,
+.page-main__link-login:focus {
+  outline: 2px solid $grey-focus;
+  outline-offset: 2px;
+}
+
+//active
+
+.page-main__link-breadcrumb:active,
+.page-main__link-login:active {
+  outline: none;
+  opacity: 0.3;
 }

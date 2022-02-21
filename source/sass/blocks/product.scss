@@ -55,13 +55,14 @@
   }
 }
 
-
 //1 столбец
-.product__wrapper-img {
+.product__link-img {
   width: 150px;
   height: 150px;
   margin-right: 20px;
   box-sizing: border-box;
+
+  cursor: pointer;
 
   @media (max-width: $mobile-max-width) {
     position: relative;
@@ -72,7 +73,7 @@
   }
 }
 
-.product__wrapper-img img {
+.product__link-img img {
   display: block;
   width: 100%;
   height: 100%;
@@ -94,7 +95,7 @@
   margin-right: 29px;
 
   @media (max-width: $mobile-max-width) {
-    grid-template-rows: 1fr  min-content;
+    grid-template-rows: 1fr min-content;
     width: 37.15%;
     margin-right: 5.5%;
   }
@@ -130,6 +131,12 @@
   @media (max-width: $mobile-max-width) {
     display: none;
   }
+}
+
+.product__link-text {
+  color: $black;
+
+  cursor: pointer;
 }
 
 .product__quantity {
@@ -173,7 +180,7 @@
   position: relative;
 
   margin: 0;
-  padding: 0;
+  padding: 8px;
 
   border: none;
   background-color: transparent;
@@ -183,8 +190,9 @@
 .product__button-quantity--minus::after {
   content: "";
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 0;
+  transform: translateY(-50%);
 
   width: 16px;
   height: 2px;
@@ -196,12 +204,12 @@
   }
 }
 
-
 .product__button-quantity--plus::after {
   content: "";
   position: absolute;
-  top: 0;
+  top: 50%;
   right: 0;
+  transform: translateY(-50%);
 
   width: 16px;
   height: 2px;
@@ -216,9 +224,9 @@
 .product__button-quantity--plus::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: 50%;
   right: 0;
-  transform: rotate(90deg);
+  transform: translateY(-50%) rotate(90deg);
 
   width: 16px;
   height: 2px;
@@ -279,4 +287,35 @@
     line-height: 14px;
     text-align: end;
   }
+}
+
+//СТАЙЛГАЙД
+//hover
+.product__link-img:hover,
+.product__link-text:hover,
+.product__button-quantity:hover {
+  opacity: 0.6;
+}
+
+.product__button-delete:hover {
+  color: $black;
+}
+
+//focus
+.product__link-img:focus,
+.product__link-text:focus,
+.product__button-quantity:focus,
+.product__button-delete:focus,
+.product__quantity input:focus {
+  outline: 2px solid $grey-focus;
+  outline-offset: 2px;
+}
+
+//active
+.product__link-img:active,
+.product__link-text:active,
+.product__button-quantity:active,
+.product__button-delete:active {
+  outline: none;
+  opacity: 0.3;
 }

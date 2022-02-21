@@ -371,9 +371,12 @@
 .page-header__toggle:hover,
 .page-header__button-search:hover,
 .page-header__link-navigation-user[href]:hover svg,
-.page-header__form input:hover,
 .page-header__logo-link:hover {
   opacity: 0.6;
+}
+
+.page-header__form input:hover::placeholder {
+  color: $black;
 }
 
 .page-header__link-navigation-site:hover {

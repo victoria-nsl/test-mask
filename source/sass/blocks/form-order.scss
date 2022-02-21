@@ -54,3 +54,23 @@
     padding: 19px 19px 17px 19px;
   }
 }
+
+//СТАЙЛГАЙД
+//hover
+
+.form-order__button-buy:hover {
+  color: $white;
+  background-color: $black;
+}
+
+//focus
+.form-order__button-buy:focus {
+  outline: 2px solid $grey-focus;
+  outline-offset: 2px;
+}
+
+//active
+.form-order__button-buy:active {
+  outline: none;
+  opacity: 0.3;
+}
