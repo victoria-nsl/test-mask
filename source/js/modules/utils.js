@@ -1,4 +1,7 @@
 const KEYCODE_TAB = 9;
+const KEY_ESCAPE= 'Escape';
+const KEY_ESC = 'Esc';
+const KEY_TAB = 'Tab';
 
 const setFocusTab = (evt, firstElement, lastElement) => {
   const isShiftPressed = evt.shiftKey;
@@ -17,5 +20,7 @@ const setFocusTab = (evt, firstElement, lastElement) => {
     firstElement.focus();
   }
 };
+const isEscEvent = (evt) => evt.key ===  KEY_ESCAPE || evt.key === KEY_ESC;
+const isTabEvent = (evt) => evt.key ===  KEY_TAB;
 
-export { setFocusTab };
+export { setFocusTab, isEscEvent, isTabEvent};

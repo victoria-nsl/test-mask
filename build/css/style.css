@@ -183,7 +183,7 @@ img {
   @media (max-width: 1149px) {
     .page-header__form input {
       position: absolute;
-      bottom: 0;
+      bottom: -20px;
       left: 0;
       width: 0;
       border-bottom: none; } }
@@ -535,7 +535,7 @@ img {
       font-size: 26px;
       line-height: 30px;
       color: #000000;
-      background-color: transparent; } }
+      background-color: #ffffff; } }
 
 .form-order__button-buy {
   width: 100%;
@@ -555,7 +555,7 @@ img {
 
 .form-order__button-buy:hover {
   color: #ffffff;
-  background-color: #000000; }
+  background-color: #000001; }
 
 .form-order__button-buy:focus {
   outline: 2px solid #8da399;
@@ -598,7 +598,6 @@ img {
       width: 100%; } }
 
 .info-user__item input,
-.info-user__item select,
 .info-user__item textarea {
   width: 100%;
   padding: 18px 0 7px 0;
@@ -611,7 +610,6 @@ img {
   cursor: pointer; }
   @media (max-width: 1149px) {
     .info-user__item input,
-    .info-user__item select,
     .info-user__item textarea {
       padding: 18px 0 8px 0; } }
 
@@ -628,33 +626,79 @@ img {
   .info-user__item textarea::placeholder {
     color: #9f9f9f; }
 
-.info-user__item select {
-  padding: 18px 0 9px 0;
-  color: #9f9f9f;
-  appearance: none;
-  background-color: transparent; }
-
-.info-user__item--type {
+.info-user__item--select {
   position: relative; }
 
-.info-user__item--type::after {
+.info-user__item--select::after {
   content: "";
   position: absolute;
   top: 25px;
   right: 0;
-  z-index: -1;
   width: 19px;
   height: 8px;
   background-image: url("../img/back-icon-arrow.svg");
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  pointer-events: none; }
+
+.info-user__button-select {
+  width: 100%;
+  padding: 18px 0 9px 0;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 120%;
+  color: #9f9f9f;
+  text-align: start;
+  border: none;
+  border-bottom: 1px solid #9f9f9f;
+  cursor: pointer;
+  background-color: transparent; }
+  @media (max-width: 1149px) {
+    .info-user__button-select {
+      padding: 18px 0 8px 0; } }
+
+.info-user__button-select--active {
+  color: #000000; }
+
+.info-user__list-select {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  top: 47px;
+  left: 0;
+  z-index: 20;
+  display: none;
+  width: 100%;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 120%;
+  color: #9f9f9f;
+  text-align: start;
+  background-color: #ffffff;
+  border: 1px solid #9f9f9f;
+  border-top: none;
+  border-radius: 0 0 5px 5px; }
+
+.info-user__list-select--active {
+  display: block; }
+
+.info-user__item-select {
+  width: 100%;
+  padding: 18px 20px 9px 20px;
+  box-sizing: border-box; }
+
+.info-user__item-select--active {
+  color: #000000; }
 
 .info-user__item input:hover::placeholder,
-.info-user__item select:hover,
+.info-user__button-select:hover,
+.info-user__item-select:hover,
 .info-user__item textarea:hover::placeholder {
   color: #000000; }
 
 .info-user__item input:focus,
-.info-user__item select:focus,
+.info-user__button-select:focus-visible,
 .info-user__item textarea:focus {
   outline: 2px solid #8da399;
   outline-offset: 2px; }
@@ -663,9 +707,6 @@ img {
 .info-user__item textarea:active {
   outline: none;
   opacity: 0.3; }
-
-.info-user__item option:selected {
-  color: #000000; }
 
 .info-user__item input[type="text"]:invalid {
   color: #d80909; }
@@ -748,7 +789,7 @@ img {
   margin-right: 29px; }
   @media (max-width: 1149px) {
     .product__wrapper-description {
-      grid-template-rows: 1fr  min-content;
+      grid-template-rows: 1fr min-content;
       width: 37.15%;
       margin-right: 5.5%; } }
 
@@ -817,6 +858,12 @@ img {
   border: none;
   background-color: transparent;
   cursor: pointer; }
+  @media (max-width: 1149px) {
+    .product__button-quantity {
+      padding: 6px; } }
+
+.product__item--nojs .product__button-quantity {
+  display: none; }
 
 .product__button-quantity--minus::after {
   content: "";
@@ -896,6 +943,9 @@ img {
       font-size: 12px;
       line-height: 14px;
       text-align: end; } }
+
+.product__item--nojs .product__button-delete {
+  display: none; }
 
 .product__link-img:hover,
 .product__link-text:hover,

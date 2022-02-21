@@ -28,7 +28,7 @@
           <label class="visually-hidden" for="search">Поиск</label>
           <input id="search" type="search" name="text" placeholder="Поиск" autocomplete="off" required>
         </form>
-        <a class="page-header__logo-link" href="#">
+        <a class="page-header__logo-link" href="#" aria-label="Перейти на главную страницу">
           <svg role="img" width="160" height="50">
             <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
           </svg>
@@ -116,26 +116,25 @@
             <li class="info-user__item info-user__item--name">
               <label class="visually-hidden" for="customer-name"> Имя покупателя </label>
               <input id="customer-name" type="text" name="customer-name" placeholder="Ваше Имя"
-                pattern="^[A-Za-zА-Яа-яЁё\s]+$" required>
+                pattern="^[A-Za-zА-Яа-яЁё\s]+$" autocomplete="off" required>
             </li>
             <li class="info-user__item info-user__item--tel">
               <label class="visually-hidden" for="tel">Телефон покупателя</label>
-              <input id="tel" type="tel" name="tel" placeholder="Ваш  Телефон" pattern="^\+?[\d()\- ]+$" required>
+              <input id="tel" type="tel" name="tel" placeholder="Ваш  Телефон" pattern="^\+?[\d()\- ]+$"   autocomplete="off"  maxlength="18" required>
             </li>
             <li class="info-user__item">
               <label class="visually-hidden" for="email">Email покупателя</label>
-              <input id="email" type="email" name="email" placeholder="Ваш  Email" required>
+              <input id="email" type="email" name="email" placeholder="Ваш  Email" autocomplete="off" required>
             </li>
-            <li class="info-user__item info-user__item--type">
-              <label class="visually-hidden" for="package-type">
-                Тип упаковки
-              </label>
-              <select name="package-type" id="package-type" required>
-                <option value="">Тип упаковки</option>
-                <option value="without-package">без упаковки</option>
-                <option value="standard-package">стандартная</option>
-                <option value="gift-package">подарочная</option>
-              </select>
+            <li class="info-user__item info-user__item--select">
+              <button class= "info-user__button-select" type="button">Тип упаковки</button>
+              <ul class="info-user__list-select">
+                <li class="info-user__item-select"  data-value="without-package">без упаковки</li>
+                <li class="info-user__item-select"  data-value="standard-package">стандартная</li>
+                <li class="info-user__item-select"  data-value="gift-package">подарочная</li>
+              </ul>
+              <label class="visually-hidden" for="type-package">Выбранная упаковка</label>
+              <input class="visually-hidden" id="type-package" type="text" name="type-package" value="" required>
             </li>
             <li class="info-user__item">
               <label class="visually-hidden" for="comments-text">Текст комментария</label>
@@ -147,7 +146,7 @@
         <fieldset class="product">
           <legend>Выбранные товары:</legend>
           <ul class="product__list">
-            <li class="product__item">
+            <li class="product__item product__item--nojs">
               <a class="product__link-img" href="#">
                 <picture>
                   <source type="image/webp" media="(max-width: 1149px)"
@@ -164,9 +163,10 @@
                 <h2><a class="product__link-text" href="#">Товар 1</a></h2>
                 <p>Описание товара, которое может быть длинным</p>
                 <div class="product__quantity">
-                  <button class="product__button-quantity product__button-quantity--minus" type="button"></button>
-                  <input type="text" name="product1" value="1" data-price="1090">
-                  <button class="product__button-quantity product__button-quantity--plus" type="button"></button>
+                  <button class="product__button-quantity product__button-quantity--minus" type="button" aria-label="Убрать товар из корзины"></button>
+                  <label class="visually-hidden" for="quantity-product-1">Количество товара</label>
+                  <input id="quantity-product-1" type="text" name="product-1" value="1" data-price="1090">
+                  <button class="product__button-quantity product__button-quantity--plus" type="button" aria-label="Добавить товар в корзину"></button>
                 </div>
               </div>
               <div class="product__wrapper-total">
@@ -174,7 +174,7 @@
                 <button class="product__button-delete" type="button">Удалить</button>
               </div>
             </li>
-            <li class="product__item">
+            <li class="product__item product__item--nojs">
               <a class="product__link-img" href="#">
                 <picture>
                   <source type="image/webp" media="(max-width: 1149px)"
@@ -191,9 +191,10 @@
                 <h2><a class="product__link-text" href="#">Товар 2</a></h2>
                 <p>Описание товара, которое может быть очень-очень длинным</p>
                 <div class="product__quantity">
-                  <button class="product__button-quantity product__button-quantity--minus" type="button"></button>
-                  <input type="text" name="product2" value="1" data-price="700">
-                  <button class="product__button-quantity product__button-quantity--plus" type="button"></button>
+                  <button class="product__button-quantity product__button-quantity--minus" type="button" aria-label="Убрать товар из корзины"></button>
+                  <label class="visually-hidden" for="quantity-product-2">Количество товара</label>
+                  <input id="quantity-product-2" type="text" name="product-2" value="1" data-price="700">
+                  <button class="product__button-quantity product__button-quantity--plus" type="button" aria-label="Добавить товар в корзину"></button>
                 </div>
               </div>
               <div class="product__wrapper-total">
@@ -201,7 +202,7 @@
                 <button class="product__button-delete" type="button">Удалить</button>
               </div>
             </li>
-            <li class="product__item">
+            <li class="product__item product__item--nojs">
               <a class="product__link-img" href="#">
                 <picture>
                   <source type="image/webp" media="(max-width: 1149px)"
@@ -218,9 +219,10 @@
                 <h2><a class="product__link-text" href="#">Товар 3</a></h2>
                 <p>Короткое описание товара</p>
                 <div class="product__quantity">
-                  <button class="product__button-quantity product__button-quantity--minus" type="button"></button>
-                  <input type="text" name="product3" value="2" data-price="1000">
-                  <button class="product__button-quantity product__button-quantity--plus" type="button"></button>
+                  <button class="product__button-quantity product__button-quantity--minus" type="button" aria-label="Убрать товар из корзины"></button>
+                  <label class="visually-hidden" for="quantity-product-3">Количество товара</label>
+                  <input id="quantity-product-3" type="text" name="product-3" value="2" data-price="1000">
+                  <button class="product__button-quantity product__button-quantity--plus" type="button" aria-label="Добавить товар в корзину"></button>
                 </div>
               </div>
               <div class="product__wrapper-total">
@@ -230,7 +232,10 @@
             </li>
           </ul>
         </fieldset>
-        <p><span>Итог:</span><span id="total-price">3 790 руб.</span></p>
+        <p>
+          <span>Итог:</span>
+          <span id="total-price">3 790 руб.</span>
+        </p>
         <button class="form-order__button-buy" type="submit">Купить</button>
       </form>
     </div>

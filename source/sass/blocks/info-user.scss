@@ -36,7 +36,6 @@
 }
 
 .info-user__item input,
-.info-user__item select,
 .info-user__item textarea {
   width: 100%;
   padding: 18px 0 7px 0;
@@ -77,44 +76,101 @@
   resize: none;
 }
 
-.info-user__item select {
-  padding: 18px 0 9px 0;
-
-  color: $grey;
-
-  appearance: none;
-  background-color: transparent;
-}
-
-.info-user__item--type {
+//Выпадающий список
+.info-user__item--select {
   position: relative;
 }
 
-.info-user__item--type::after {
+.info-user__item--select::after {
   content: "";
   position: absolute;
   top: 25px;
   right: 0;
-  z-index: -1;
 
   width: 19px;
   height: 8px;
 
   background-image: url("../img/back-icon-arrow.svg");
   background-repeat: no-repeat;
+
+  pointer-events: none; //делает элемент прозрачным для клика
+}
+
+.info-user__button-select {
+  width: 100%;
+  padding: 18px 0 9px 0;
+  box-sizing: border-box;
+
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 120%;
+  color: $grey;
+  text-align: start;
+
+  border: none;
+  border-bottom: 1px solid $grey;
+
+  cursor: pointer;
+
+  background-color: transparent;
+
+  @media (max-width: $mobile-max-width) {
+    padding: 18px 0 8px 0;
+  }
+}
+
+.info-user__button-select--active {
+  color: $black;
+}
+
+.info-user__list-select {
+  @include reset-style-list;
+  position: absolute;
+  top: 47px;
+  left: 0;
+  z-index: 20;
+
+  display: none;
+  width: 100%;
+
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 120%;
+  color: $grey;
+  text-align: start;
+
+  background-color: $white;
+  border: 1px solid $grey;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+}
+
+.info-user__list-select--active {
+  display: block;
+}
+
+.info-user__item-select {
+  width: 100%;
+  padding: 18px 20px 9px 20px;
+  box-sizing: border-box;
+}
+
+.info-user__item-select--active {
+  color: $black;
 }
 
 //СТАЙЛГАЙД
 //hover
 .info-user__item input:hover::placeholder,
-.info-user__item select:hover,
+.info-user__button-select:hover,
+.info-user__item-select:hover,
 .info-user__item textarea:hover::placeholder {
   color: $black;
 }
 
 //focus
 .info-user__item input:focus,
-.info-user__item select:focus,
+.info-user__button-select:focus-visible,
 .info-user__item textarea:focus {
   outline: 2px solid $grey-focus;
   outline-offset: 2px;

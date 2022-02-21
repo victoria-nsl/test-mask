@@ -30,7 +30,7 @@
     line-height: 30px;
     color: $black;
 
-    background-color: transparent;
+    background-color: $white;
   }
 }
 
@@ -60,7 +60,7 @@
 
 .form-order__button-buy:hover {
   color: $white;
-  background-color: $black;
+  background-color: $black-basis;
 }
 
 //focus

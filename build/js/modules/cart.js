@@ -7,6 +7,8 @@ if (order) {
   const buttonsQuantity = order.querySelectorAll('.product__button-quantity');
   const buttonsDelete = order.querySelectorAll('.product__button-delete');
 
+  productsSelected.forEach((productSelected) => productSelected.classList.remove('product__item--nojs'));
+
   const formatNumber = (number) => number.toString().replace(/\B(?=(?:\d{3})*$)/g, ' ');
 
   const calculatePriceProduct = (quantity) => Number(quantity.value) * Number(quantity.dataset.price);
