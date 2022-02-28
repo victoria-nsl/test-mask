@@ -1,26 +1,34 @@
-const order = document.querySelector('.form-order');
+const form = document.querySelector('.form-order');
 
-if (order) {
+if (form) {
+  const productsSelected = form.getElementsByClassName('product__item');//живая коллекция, использована, чтобы при удалении карточки товаров изменялся productsSelected
+  const totalPriceProductsSelected = form.querySelector('#total-price');
+  const buttonsQuantity = form.querySelectorAll('.product__button-quantity');//статическая коллекция
+  const buttonsDelete = form.querySelectorAll('.product__button-delete');
 
-  let productsSelected = order.querySelectorAll('.product__item');
-  const totalPriceProductsSelected = order.querySelector('#total-price');
-  const buttonsQuantity = order.querySelectorAll('.product__button-quantity');
-  const buttonsDelete = order.querySelectorAll('.product__button-delete');
 
-  productsSelected.forEach((productSelected) => productSelected.classList.remove('product__item--nojs'));
+  Array.from(productsSelected).forEach((productSelected) => productSelected.classList.remove('product__item--nojs'));
 
-  const formatNumber = (number) => number.toString().replace(/\B(?=(?:\d{3})*$)/g, ' ');
+  //const formatNumber = (number) => number.toString().replace(/\B(?=(?:\d{3})*$)/g, ' ');
+  const formatNumber = (number) => {
+    const formatter = new Intl.NumberFormat('ru', {
+      style: 'currency',
+      currency: 'RUB',
+      maximumFractionDigits: 0,
+    });//интернационализация
+    return formatter.format(number.toString());
+  };
 
-  const calculatePriceProduct = (quantity) => Number(quantity.value) * Number(quantity.dataset.price);
+  const calculatePriceProduct = (quantity) => formatNumber(Number(quantity.value) * Number(quantity.dataset.price));
 
   const calculatePriceCart = (products) => {
     let totalPrice = 0;
-    products.forEach((product) => {
+    Array.from(products).forEach((product) => {
       const quantity = product.querySelector('input');
-      totalPrice += calculatePriceProduct(quantity);
+      totalPrice += Number(quantity.value) * Number(quantity.dataset.price);
     });
 
-    totalPriceProductsSelected.textContent = `${formatNumber(totalPrice)} руб.`;
+    totalPriceProductsSelected.textContent = formatNumber(totalPrice);
   };
 
   const onButtonQuantity  = (evt) => {
@@ -36,7 +44,7 @@ if (order) {
       quantityProduct.value++;
     }
 
-    priceProduct.textContent = `${calculatePriceProduct(quantityProduct)} руб.`;
+    priceProduct.textContent = calculatePriceProduct(quantityProduct);
 
     calculatePriceCart(productsSelected);
   };
@@ -44,7 +52,6 @@ if (order) {
   const onButtonsDelete = (evt) => {
     const product = evt.target.closest('.product__item');
     product.remove();
-    productsSelected = order.querySelectorAll('.product__item');
     calculatePriceCart(productsSelected);
   };
 
