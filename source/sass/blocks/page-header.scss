@@ -64,6 +64,12 @@
   }
 }
 
+.page-header--nojs .page-header__button {
+  @media (max-width: $tablet-max-width) {
+    display: none;
+  }
+}
+
 //Логотип
 .page-header__logo-link img {
   width: 156px;
@@ -120,8 +126,19 @@
 
 .page-header--closed .page-header__list-navigation-site {
   @media (max-width: $tablet-max-width) {
-    //display: none;
-    width: 100%;
+    display: none;
+  }
+}
+
+.page-header--opened .page-header__list-navigation-site {
+  @media (max-width: $tablet-max-width) {
+    display: block;
+  }
+}
+
+.page-header--nojs .page-header__list-navigation-site {
+  @media (max-width: $tablet-max-width) {
+    display: block;
   }
 }
 
@@ -170,6 +187,24 @@
   }
 }
 
+.page-header--closed .page-header__list-navigation-user {
+  @media (max-width: $mobile-max-width) {
+    display: none;
+  }
+}
+
+.page-header--opened .page-header__list-navigation-user {
+  @media (max-width: $mobile-max-width) {
+    display: block;
+  }
+}
+
+.page-header--nojs .page-header__list-navigation-user {
+  @media (max-width: $mobile-max-width) {
+    display: block;
+  }
+}
+
 //Кнопка телефон
 .page-header__item-navigation-user--phone {
   width: 76px;
@@ -185,7 +220,8 @@
   @media (max-width: $mobile-max-width) {
     width: 95%;
     margin-right: 0;
-    margin-left: 0;
+    margin-left: 15px;
+    margin-bottom: 6px;
   }
 }
 
@@ -227,5 +263,6 @@
 
   @media (max-width: $mobile-max-width) {
     width: 95%;
+    margin-left: 15px;
   }
 }
