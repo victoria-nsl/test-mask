@@ -1,0 +1,107 @@
+.page-header {
+  width: 100%;
+  padding: 28px 5.2%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.page-header__navigation {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+//Кнопка открытия/закрытия
+.page-header__button {
+  display: none;
+}
+
+//Логотип
+.page-header__logo-link {
+  width: 156px;
+  height: 60px;
+  margin-right: 4.4%;
+}
+
+.page-header__logo-link img {
+  width: 156px;
+  height: 60px;
+}
+
+//Навигация по сайту и пользовательская
+.page-header__wrapper-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 86.5%;
+}
+
+//Навигация по сайту
+.page-header__list-navigation-site {
+  @include reset-style-list;
+
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 42px;
+  row-gap: 10px;
+  align-items: center;
+  width: 55.6%;
+}
+
+.page-header__link-navigation-site {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: $white;
+}
+
+//Пользовательская навигация
+.page-header__list-navigation-user {
+  @include reset-style-list;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 26.7%;
+}
+
+//Кнопка телефон
+.page-header__item-navigation-user--phone {
+  width: 19%;
+  margin-right: 6.3%;
+  margin-left: 3%;
+}
+
+.page-header__item-navigation-user--phone span {
+  display: none;
+}
+
+.page-header__link-navigation-user--phone {
+  position: relative;
+
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  height: 60px;
+  box-sizing: border-box;
+  transform: skewX(-17deg);
+
+  background-color: transparent;
+  border: 1px solid $white;
+}
+
+.page-header__link-navigation-user--phone svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) skewX(17deg);
+
+  width: 20px;
+  height: 20px;
+}
+
+//Кнопка отправить заявку
+.page-header__item-navigation-user--request {
+  width: 67%;
+}

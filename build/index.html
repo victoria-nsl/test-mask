@@ -5,225 +5,91 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="Корзина товаров покупателя">
-  <title>Корзина товаров</title>
-  <link rel="preload" href="fonts/helvetica-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="fonts/helvetica-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <meta name="description" content="Полет Илона Маска">
+  <title>Тестовое задание: Полет Илона Маска</title>
+  <link rel="preload" href="fonts/montserrat-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserrat-semibold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="page-body">
-  <header class="page-header page-header--closed page-header--nojs">
+  <header class="page-header">
+
     <nav class="page-header__navigation">
-      <div class="page-header__wrapper-navigation-top">
-        <button class="page-header__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <form class="page-header__form" name="search" method="get" action="https://echo.htmlacademy.ru">
-          <button class="page-header__button-search" type="submit" aria-label="Отправить запрос с поиском">
-            <svg role="img" width="25" height="25" aria-hidden="true">
-              <use xlink:href="img/sprite_auto.svg#icon-search"></use>
-            </svg>
-          </button>
-          <label class="visually-hidden" for="search">Поиск</label>
-          <input id="search" type="search" name="text" placeholder="Поиск" autocomplete="off" required="">
-        </form>
-        <a class="page-header__logo-link" href="#" aria-label="Перейти на главную страницу">
-          <svg role="img" width="160" height="50">
-            <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
-          </svg>
-        </a>
+
+      <button class="page-header__button" type="button" aria-label="Открыть/закрыть меню"></button>
+      <a class="page-header__logo-link">
+        <picture>
+          <img src="img/logotype.svg" width="156" height="60" alt="Логотип компании Magwai">
+        </picture>
+      </a>
+
+      <div class="page-header__wrapper-list">
+        <ul class="page-header__list-navigation-site">
+          <li class="page-header__item-navigation-site">
+            <a class="page-header__link-navigation-site" href="#">
+              Услуги
+            </a>
+          </li>
+          <li class="page-header__item-navigation-site">
+            <a class="page-header__link-navigation-site" href="#">
+              Абонементы
+            </a>
+          </li>
+          <li class="page-header__item-navigation-site">
+            <a class="page-header__link-navigation-site" href="#">
+              Почему мы
+            </a>
+          </li>
+          <li class="page-header__item-navigation-site">
+            <a class="page-header__link-navigation-site" href="#">
+              Оборудование
+            </a>
+          </li>
+          <li class="page-header__item-navigation-site">
+            <a class="page-header__link-navigation-site" href="#">
+              Акции
+            </a>
+          </li>
+          <li class="page-header__item-navigation-site">
+            <a class="page-header__link-navigation-site" href="#">
+              FAQ
+            </a>
+          </li>
+          <li class="page-header__item-navigation-site">
+            <a class="page-header__link-navigation-site" href="#">
+              Контакты
+            </a>
+          </li>
+        </ul>
+
         <ul class="page-header__list-navigation-user">
-          <li class="page-header__item-navigation-user page-header__item-navigation-user--login">
-            <a class="page-header__link-navigation-user page-header__link-navigation-user--login" href="#" aria-label="Войти в профиль пользователя">
-              <svg role="img" width="22" height="25" aria-hidden="true">
-                <use xlink:href="img/sprite_auto.svg#icon-login"></use>
+          <li class="page-header__item-navigation-user page-header__item-navigation-user--phone">
+            <a class="page-header__link-navigation-user page-header__link-navigation-user--phone" href="tel:+74957777777" aria-label="Позвонить по телефону компании Magwai">
+              <svg role="img" width="20" height="20">
+                <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
               </svg>
+              <span>+7 (495) 777 77 77</span>
             </a>
           </li>
-          <li class="page-header__item-navigation-user page-header__item-navigation-user--like">
-            <a class="page-header__link-navigation-user page-header__link-navigation-user--like" href="#" aria-label="Добавить в избранное">
-              <svg role="img" width="28" height="25" aria-hidden="true">
-                <use xlink:href="img/sprite_auto.svg#icon-like"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="page-header__item-navigation-user page-header__item-navigation-user--cart">
-            <a class="page-header__link-navigation-user page-header__link-navigation-user--cart" aria-label="Открыть корзину">
-              <div class="page-header__cart-counter">3</div>
-              <svg role="img" width="23" height="25">
-                <use xlink:href="img/sprite_auto.svg#icon-cart"></use>
-              </svg>
+          <li class="page-header__item-navigation-user page-header__item-navigation-user--request">
+            <a class="page-header__link-navigation-user page-header__link-navigation-user--request  button" href="request.html">
+              <span>Оставить заявку</span> 
             </a>
           </li>
         </ul>
       </div>
-      <ul class="page-header__list-navigation-site">
-        <li class="page-header__item-navigation-site">
-          <a class="page-header__link-navigation-site" href="#">Страница 1</a>
-        </li>
-        <li class="page-header__item-navigation-site">
-          <a class="page-header__link-navigation-site" href="#">Страница 2</a>
-        </li>
-        <li class="page-header__item-navigation-site">
-          <a class="page-header__link-navigation-site" href="#">Страница 3</a>
-        </li>
-        <li class="page-header__item-navigation-site">
-          <a class="page-header__link-navigation-site" href="#">Страница 4</a>
-        </li>
-        <li class="page-header__item-navigation-site">
-          <a class="page-header__link-navigation-site" href="#">Страница 5</a>
-        </li>
-        <li class="page-header__item-navigation-site">
-          <a class="page-header__link-navigation-site" href="#">Страница 6</a>
-        </li>
-      </ul>
     </nav>
+
+
   </header>
   <main class="page-main">
-    <div class="page-main__inner">
-      <ul class="page-main__list-breadcrumb">
-        <li class="page-main__item-breadcrumb" data-slash="/"><a class="page-main__link-breadcrumb" href="#">Главная</a>
-        </li>
-        <li class="page-main__item-breadcrumb page-main__item-breadcrumb--active">Корзина</li>
-      </ul>
-      <h1>Корзина</h1>
-      <p>Есть аккаунт? <a class="page-main__link-login" href="#">Войти</a></p>
 
-      <section class="contacts">
-        <h2>Адрес</h2>
-        <p>г. Санкт-Петербург, пр.<br> Просвещения, д. 99, кв. 152</p>
-        <div class="contacts__wrapper-img">
-          <picture>
-            <source type="image/webp" media="(max-width: 1149px)" srcset="img/map-mobile.webp 1x, img/map-desktop@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 1150px)" srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
-
-            <source media="(max-width: 1149px)" srcset="img/map-mobile.png 1x, img/map-mobile@2x.png 2x">
-            <img width="555" height="700" src="img/map-desktop.png" srcset="img/map-desktop@2x.png 2x" alt="Карта г. Санкт-Петербург">
-          </picture>
-        </div>
-      </section>
-      <form class="form-order" name="order" method="post" action="https://echo.htmlacademy.ru">
-        <fieldset class="info-user">
-          <legend class="visually-hidden">Информация о покупателе и типе упаковки</legend>
-          <ul class="info-user__list">
-            <li class="info-user__item info-user__item--name">
-              <label class="visually-hidden" for="customer-name"> Имя покупателя </label>
-              <input id="customer-name" type="text" name="customer-name" placeholder="Ваше Имя" pattern="^[A-Za-zА-Яа-яЁё\s]+$" autocomplete="off" required="">
-            </li>
-            <li class="info-user__item info-user__item--tel">
-              <label class="visually-hidden" for="tel">Телефон покупателя</label>
-              <input id="tel" type="tel" name="tel" placeholder="Ваш  Телефон" pattern="^\+?[\d()\- ]+$" autocomplete="off" maxlength="18" required="">
-            </li>
-            <li class="info-user__item">
-              <label class="visually-hidden" for="email">Email покупателя</label>
-              <input id="email" type="email" name="email" placeholder="Ваш  Email" autocomplete="off" required="">
-            </li>
-            <li class="info-user__item info-user__item--select">
-              <button class="info-user__button-select" type="button">Тип упаковки</button>
-              <ul class="info-user__list-select">
-                <li class="info-user__item-select" data-value="without-package">Без упаковки</li>
-                <li class="info-user__item-select" data-value="standard-package">Стандартная</li>
-                <li class="info-user__item-select" data-value="gift-package">Подарочная</li>
-              </ul>
-              <label class="visually-hidden" for="type-package">Выбранная упаковка</label>
-              <input class="visually-hidden" id="type-package" type="text" name="type-package" value="" required="">
-            </li>
-            <li class="info-user__item">
-              <label class="visually-hidden" for="comments-text">Текст комментария</label>
-              <textarea id="comments-text" name="comments" placeholder="Введите комментарий"></textarea>
-            </li>
-          </ul>
-        </fieldset>
-
-        <fieldset class="product">
-          <legend>Выбранные товары:</legend>
-          <ul class="product__list">
-            <li class="product__item product__item--nojs">
-              <a class="product__link-img" href="#">
-                <picture>
-                  <source type="image/webp" media="(max-width: 1149px)" srcset="img/product-desktop.webp 1x, img/product-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 1150px)" srcset="img/product-desktop.webp 1x, img/product-desktop@2x.webp 2x">
-
-                  <source media="(max-width: 1149px)" srcset="img/product-mobile.jpg 1x, img/product-mobile@2x.jpg 2x">
-                  <img width="150" height="150" src="img/product-desktop.jpg" srcset="img/product-desktop@2x.jpg 2x" alt="Фотография товара">
-                </picture>
-              </a>
-              <div class="product__wrapper-description">
-                <h2><a class="product__link-text" href="#">Товар 1</a></h2>
-                <p>Описание товара, которое может быть длинным</p>
-                <div class="product__quantity">
-                  <button class="product__button-quantity product__button-quantity--minus" type="button" aria-label="Убрать товар из корзины"></button>
-                  <label class="visually-hidden" for="quantity-product-1">Количество товара</label>
-                  <input id="quantity-product-1" type="text" name="product-1" value="1" data-price="1090">
-                  <button class="product__button-quantity product__button-quantity--plus" type="button" aria-label="Добавить товар в корзину"></button>
-                </div>
-              </div>
-              <div class="product__wrapper-total">
-                <p>1 090 ₽</p>
-                <button class="product__button-delete" type="button">Удалить</button>
-              </div>
-            </li>
-            <li class="product__item product__item--nojs">
-              <a class="product__link-img" href="#">
-                <picture>
-                  <source type="image/webp" media="(max-width: 1149px)" srcset="img/product-mobile.webp 1x, img/product-desktop@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 1150px)" srcset="img/product-desktop.webp 1x, img/product-desktop@2x.webp 2x">
-
-                  <source media="(max-width: 1149px)" srcset="img/product-mobile.jpg 1x, img/product-mobile@2x.jpg 2x">
-                  <img width="150" height="150" src="img/product-desktop.jpg" srcset="img/product-desktop@2x.jpg 2x" alt="Фотография товара">
-                </picture>
-              </a>
-              <div class="product__wrapper-description">
-                <h2><a class="product__link-text" href="#">Товар 2</a></h2>
-                <p>Описание товара, которое может быть очень-очень длинным</p>
-                <div class="product__quantity">
-                  <button class="product__button-quantity product__button-quantity--minus" type="button" aria-label="Убрать товар из корзины"></button>
-                  <label class="visually-hidden" for="quantity-product-2">Количество товара</label>
-                  <input id="quantity-product-2" type="text" name="product-2" value="1" data-price="700">
-                  <button class="product__button-quantity product__button-quantity--plus" type="button" aria-label="Добавить товар в корзину"></button>
-                </div>
-              </div>
-              <div class="product__wrapper-total">
-                <p>700 ₽</p>
-                <button class="product__button-delete" type="button">Удалить</button>
-              </div>
-            </li>
-            <li class="product__item product__item--nojs">
-              <a class="product__link-img" href="#">
-                <picture>
-                  <source type="image/webp" media="(max-width: 1149px)" srcset="img/product-mobile.webp 1x, img/product-desktop@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 1150px)" srcset="img/product-desktop.webp 1x, img/product-desktop@2x.webp 2x">
-
-                  <source media="(max-width: 1149px)" srcset="img/product-mobile.jpg 1x, img/product-mobile@2x.jpg 2x">
-                  <img width="150" height="150" src="img/product-desktop.jpg" srcset="img/product-desktop@2x.jpg 2x" alt="Фотография товара">
-                </picture>
-              </a>
-              <div class="product__wrapper-description">
-                <h2><a class="product__link-text" href="#">Товар 3</a></h2>
-                <p>Короткое описание товара</p>
-                <div class="product__quantity">
-                  <button class="product__button-quantity product__button-quantity--minus" type="button" aria-label="Убрать товар из корзины"></button>
-                  <label class="visually-hidden" for="quantity-product-3">Количество товара</label>
-                  <input id="quantity-product-3" type="text" name="product-3" value="2" data-price="1000">
-                  <button class="product__button-quantity product__button-quantity--plus" type="button" aria-label="Добавить товар в корзину"></button>
-                </div>
-              </div>
-              <div class="product__wrapper-total">
-                <p>2 000 ₽.</p>
-                <button class="product__button-delete" type="button">Удалить</button>
-              </div>
-            </li>
-          </ul>
-        </fieldset>
-        <p>
-          <span>Итог:</span>
-          <span id="total-price">3 790 ₽</span>
-        </p>
-        <button class="form-order__button-buy" type="submit">Купить</button>
-      </form>
-    </div>
   </main>
+  <footer class="page-footer">
+
+  </footer>
   <script type="module" src="js/main.js"></script>
 </body>
 

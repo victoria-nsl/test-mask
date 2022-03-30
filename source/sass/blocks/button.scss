@@ -1,0 +1,24 @@
+.button {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  padding: 21px;
+  box-sizing: border-box;
+  transform: skewX(-17deg);
+
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 150%;
+  text-transform: uppercase;
+  text-align: center;
+  color: $white;
+
+  background-color: $brown-ligth;
+  border: none;
+  box-shadow: 6px 0 $black-basis, 12px 0 $white;
+}
+
+.button span {
+  display: block;
+  transform: skewX(17deg);
+}

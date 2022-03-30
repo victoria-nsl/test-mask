@@ -15,16 +15,17 @@
 
 <body class="page-body">
   <header class="page-header">
-    <div class="page-header__inner">
-      <nav class="page-header__navigation">
 
-        <button class="page-header__button" type="button" aria-label="Открыть/закрыть меню"></button>
-        <a class="page-header__logo-link">
-          <picture>
-            <img src="img/logotype.svg" width="156" height="60" alt="Логотип компании Magwai">
-          </picture>
-        </a>
+    <nav class="page-header__navigation">
 
+      <button class="page-header__button" type="button" aria-label="Открыть/закрыть меню"></button>
+      <a class="page-header__logo-link">
+        <picture>
+          <img src="img/logotype.svg" width="156" height="60" alt="Логотип компании Magwai">
+        </picture>
+      </a>
+
+      <div class="page-header__wrapper-list">
         <ul class="page-header__list-navigation-site">
           <li class="page-header__item-navigation-site">
             <a class="page-header__link-navigation-site" href="#">
@@ -65,21 +66,24 @@
 
         <ul class="page-header__list-navigation-user">
           <li class="page-header__item-navigation-user page-header__item-navigation-user--phone">
-            <a class="page-header__link-navigation-user page-header__link-navigation-user--phone" href="tel:+74957777777" aria-label="Позвонить по телефону компании Magwai">
-              <svg role ="img" width="20" height="20">
+            <a class="page-header__link-navigation-user page-header__link-navigation-user--phone"
+              href="tel:+74957777777" aria-label="Позвонить по телефону компании Magwai">
+              <svg role="img" width="20" height="20">
                 <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
               </svg>
               <span>+7 (495) 777 77 77</span>
             </a>
           </li>
           <li class="page-header__item-navigation-user page-header__item-navigation-user--request">
-            <a class="page-header__link-navigation-user page-header__link-navigation-user--request" href="request.html">
-              Оставить заявку
+            <a class="page-header__link-navigation-user page-header__link-navigation-user--request  button"
+              href="request.html">
+              <span>Оставить заявку</span>
             </a>
           </li>
         </ul>
-      </nav>
-    </div>
+      </div>
+    </nav>
+
 
   </header>
   <main class="page-main">
