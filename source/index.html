@@ -5,22 +5,88 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="Описание">
-  <title>Название проекта</title>
-  <!-- <link rel="preload" href="fonts/helvetica-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="fonts/helvetica-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous"> -->
+  <meta name="description" content="Полет Илона Маска">
+  <title>Тестовое задание: Полет Илона Маска</title>
+  <link rel="preload" href="fonts/montserrat-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserrat-semibold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="page-body">
   <header class="page-header">
+    <div class="page-header__inner">
+      <nav class="page-header__navigation">
+
+        <button class="page-header__button" type="button" aria-label="Открыть/закрыть меню"></button>
+        <a class="page-header__logo-link">
+          <picture>
+            <img src="img/logotype.svg" width="156" height="60" alt="Логотип компании Magwai">
+          </picture>
+        </a>
+
+        <ul class="page-header__list-navigation-site">
+          <li class="page-header__item-navigation-site">
+            <a class="page-header__link-navigation-site" href="#">
+              Услуги
+            </a>
+          </li>
+          <li class="page-header__item-navigation-site">
+            <a class="page-header__link-navigation-site" href="#">
+              Абонементы
+            </a>
+          </li>
+          <li class="page-header__item-navigation-site">
+            <a class="page-header__link-navigation-site" href="#">
+              Почему мы
+            </a>
+          </li>
+          <li class="page-header__item-navigation-site">
+            <a class="page-header__link-navigation-site" href="#">
+              Оборудование
+            </a>
+          </li>
+          <li class="page-header__item-navigation-site">
+            <a class="page-header__link-navigation-site" href="#">
+              Акции
+            </a>
+          </li>
+          <li class="page-header__item-navigation-site">
+            <a class="page-header__link-navigation-site" href="#">
+              FAQ
+            </a>
+          </li>
+          <li class="page-header__item-navigation-site">
+            <a class="page-header__link-navigation-site" href="#">
+              Контакты
+            </a>
+          </li>
+        </ul>
+
+        <ul class="page-header__list-navigation-user">
+          <li class="page-header__item-navigation-user page-header__item-navigation-user--phone">
+            <a class="page-header__link-navigation-user page-header__link-navigation-user--phone" href="tel:+74957777777" aria-label="Позвонить по телефону компании Magwai">
+              <svg role ="img" width="20" height="20">
+                <use xlink:href="img/sprite_auto.svg#icon-phone"></use>
+              </svg>
+              <span>+7 (495) 777 77 77</span>
+            </a>
+          </li>
+          <li class="page-header__item-navigation-user page-header__item-navigation-user--request">
+            <a class="page-header__link-navigation-user page-header__link-navigation-user--request" href="request.html">
+              Оставить заявку
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
 
   </header>
   <main class="page-main">
 
   </main>
   <footer class="page-footer">
-    
+
   </footer>
   <script type="module" src="js/main.js"></script>
 </body>
