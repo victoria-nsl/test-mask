@@ -14,16 +14,23 @@
 </head>
 
 <body class="page-body">
-  <header class="page-header">
+  <header class="page-header page-header--closed page-header--nojs">
 
     <nav class="page-header__navigation">
+      <div class="page-header__wrapper-top">
+        <button class="page-header__button" type="button" aria-label="Открыть/закрыть меню">
+          <svg role="img" width="30" height="18">
+            <use xlink:href="img/sprite_auto.svg#icon-open"></use>
+          </svg>
+        </button>
+        <a class="page-header__logo-link">
+          <picture>
+            <source media="(max-width: 767px)" srcset="img/logotype-mobile.svg">
+            <img src="img/logotype.svg" width="156" height="60" alt="Логотип компании Magwai">
+          </picture>
+        </a>
+      </div>
 
-      <button class="page-header__button" type="button" aria-label="Открыть/закрыть меню"></button>
-      <a class="page-header__logo-link">
-        <picture>
-          <img src="img/logotype.svg" width="156" height="60" alt="Логотип компании Magwai">
-        </picture>
-      </a>
 
       <div class="page-header__wrapper-list">
         <ul class="page-header__list-navigation-site">
@@ -75,7 +82,7 @@
           </li>
           <li class="page-header__item-navigation-user page-header__item-navigation-user--request">
             <a class="page-header__link-navigation-user page-header__link-navigation-user--request  button" href="request.html">
-              <span>Оставить заявку</span> 
+              <span>Оставить заявку</span>
             </a>
           </li>
         </ul>

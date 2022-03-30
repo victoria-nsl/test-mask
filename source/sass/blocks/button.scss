@@ -16,6 +16,10 @@
   background-color: $brown-ligth;
   border: none;
   box-shadow: 6px 0 $black-basis, 12px 0 $white;
+
+  @media (max-width: $mobile-max-width) {
+    box-shadow: none;
+  }
 }
 
 .button span {

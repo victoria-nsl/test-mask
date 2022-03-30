@@ -3,29 +3,76 @@
   padding: 28px 5.2%;
   margin: 0 auto;
   box-sizing: border-box;
+
+  @media (max-width: $tablet-max-width) {
+    padding: 30px 50px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding: 5px 15px;
+  }
 }
 
 .page-header__navigation {
   display: flex;
   align-items: center;
   width: 100%;
+
+  @media (max-width: $tablet-max-width) {
+    position: relative;
+
+    flex-wrap: wrap;
+  }
+}
+
+//Верхнее меню в планшетной и мобильной версии
+.page-header__wrapper-top {
+  width: 156px;
+  height: 60px;
+  margin-right: 4.4%;
+
+  @media (max-width: $tablet-max-width) {
+    display: flex;
+    width: 100%;
+    margin-bottom: 22px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 6px;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 0;
+  }
 }
 
 //Кнопка открытия/закрытия
 .page-header__button {
   display: none;
+
+  @media (max-width: $tablet-max-width) {
+    display: block;
+    margin-right: 97px;
+    padding: 0;
+
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-right: 0;
+  }
 }
 
 //Логотип
-.page-header__logo-link {
-  width: 156px;
-  height: 60px;
-  margin-right: 4.4%;
-}
-
 .page-header__logo-link img {
   width: 156px;
   height: 60px;
+
+  @media (max-width: $mobile-max-width) {
+    width: 100px;
+    height: 39px;
+  }
 }
 
 //Навигация по сайту и пользовательская
@@ -34,6 +81,16 @@
   justify-content: space-between;
   align-items: center;
   width: 86.5%;
+
+  @media (max-width: $tablet-max-width) {
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: 54px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-top: 0;
+  }
 }
 
 //Навигация по сайту
@@ -46,6 +103,26 @@
   row-gap: 10px;
   align-items: center;
   width: 55.6%;
+
+  @media (max-width: $tablet-max-width) {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 16px;
+    column-gap: 0;
+    width: 100%;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 51px;
+    row-gap: 15px;
+  }
+}
+
+.page-header--closed .page-header__list-navigation-site {
+  @media (max-width: $tablet-max-width) {
+    //display: none;
+    width: 100%;
+  }
 }
 
 .page-header__link-navigation-site {
@@ -54,6 +131,18 @@
   line-height: 150%;
   text-transform: uppercase;
   color: $white;
+
+  @media (max-width: $tablet-max-width) {
+    font-size: 35px;
+    text-transform: uppercase;
+
+    text-shadow: 0.04em 0 $grey, -0.04em 0 $grey, 0 0.04em $grey, 0 -0.04em $grey;
+    color: $black;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    font-size: 20px;
+  }
 }
 
 //Пользовательская навигация
@@ -61,16 +150,43 @@
   @include reset-style-list;
 
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  width: 26.7%;
+  width: 398px;
+
+  @media (max-width: $tablet-max-width) {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    flex-wrap: nowrap;
+    width: 293px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    position: static;
+    flex-direction: column;
+    row-gap: 5px;
+    width: 100%;
+  }
 }
 
 //Кнопка телефон
 .page-header__item-navigation-user--phone {
-  width: 19%;
+  width: 76px;
   margin-right: 6.3%;
   margin-left: 3%;
+
+  @media (max-width: $tablet-max-width) {
+    width: 75px;
+    margin-right: 2.5%;
+    margin-left: 9%;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    width: 95%;
+    margin-right: 0;
+    margin-left: 0;
+  }
 }
 
 .page-header__item-navigation-user--phone span {
@@ -103,5 +219,13 @@
 
 //Кнопка отправить заявку
 .page-header__item-navigation-user--request {
-  width: 67%;
+  width: 370px;
+
+  @media (max-width: $tablet-max-width) {
+    width: 185px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    width: 95%;
+  }
 }
