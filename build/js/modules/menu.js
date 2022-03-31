@@ -18,7 +18,7 @@ if (header && document.documentElement.clientWidth < 1023) {
 
   header.classList.remove('page-header--nojs');
 
-  const toggleMenu = () => {
+  const onButtonToggleClick = () => {
     if (header.classList.contains('page-header--closed')) {
       openMenu();
       return;
@@ -26,5 +26,5 @@ if (header && document.documentElement.clientWidth < 1023) {
     closeMenu();
   };
 
-  buttonToggle.addEventListener('click', toggleMenu);
+  buttonToggle.addEventListener('click', onButtonToggleClick);
 }

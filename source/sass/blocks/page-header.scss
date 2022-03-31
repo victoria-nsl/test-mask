@@ -1,4 +1,5 @@
 .page-header {
+  max-width: 1920px;
   width: 100%;
   padding: 28px 5.2%;
   margin: 0 auto;
@@ -112,6 +113,12 @@
 
   @media (max-width: $mobile-max-width) {
     padding: 0 3px;
+  }
+}
+
+.page-header--closed .page-header__wrapper-list {
+  @media (max-width: $tablet-max-width) {
+    padding-top: 0;
   }
 }
 

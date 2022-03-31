@@ -14,6 +14,9 @@
 </head>
 
 <body class="page-body">
+  <!-- page-header--nojs - откpытое меню при отключенном js, кнопки нет
+    page-header--closed - закрытое меню, кнопка для открытия /бургер/
+    page-header--opened - открытое меню, кнопка для закрытия /бургер/ -->
   <header class="page-header page-header--closed page-header--nojs">
 
     <nav class="page-header__navigation">
@@ -33,7 +36,6 @@
           </picture>
         </a>
       </div>
-
 
       <div class="page-header__wrapper-list">
         <ul class="page-header__list-navigation-site">
@@ -94,9 +96,55 @@
       </div>
     </nav>
 
-
   </header>
   <main class="page-main">
+    <h1 class="visually-hidden">Полет Илона Маска</h1>
+
+    <section class="main-screen">
+      <h2 class="visually-hidden">Главный экран</h2>
+
+      <ul class="main-screen__list-slides">
+        <li class="main-screen__item-slide  main-screen__item-slide--active main-screen__item-slide--flight">
+          <div class="main-screen__inner-item">
+            <h3>Полет Илона Маска и DOGIE COIN</h3>
+            <p>В прошлый четверг все офигели от полета DOGIE COIN на марс.</p>
+            <a class="main-screen__link-slide  button" href="request.html">
+              <span>Оставить заявку</span>
+            </a>
+          </div>
+        </li>
+        <li class="main-screen__item-slide main-screen__item-slide--fall">
+          <div class="main-screen__inner-item">
+            <h3>DOGIE COIN УПАЛ</h3>
+            <p>Все в шоке, я потерял все деньги</p>
+            <a class="main-screen__link-slide  button" href="request.html">
+              <span>Оставить заявку</span>
+            </a>
+          </div>
+        </li>
+        <li class="main-screen__item-slide main-screen__item-slide--back">
+          <div class="main-screen__inner-item">
+            <h3>Эпическое возвращения на хаи</h3>
+            <p>Все в шоке, я снова богат</p>
+            <a class="main-screen__link-slide  button" href="request.html">
+              <span>Оставить заявку</span>
+            </a>
+          </div>
+        </li>
+      </ul>
+
+      <ul class="main-screen__list-buttons">
+        <li class="main-screen__item-button">
+          <button class="main-screen__button main-screen__button--active" type="button"> DOgie coin </button>
+        </li>
+        <li class="main-screen__item-button">
+          <button class="main-screen__button" type="button"> Упал </button>
+        </li>
+        <li class="main-screen__item-button">
+          <button class="main-screen__button" type="button"> Возвращение </button>
+        </li>
+      </ul>
+    </section>
 
   </main>
   <footer class="page-footer">
