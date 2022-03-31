@@ -60,6 +60,10 @@ img {
   background-color: #131313;
   color: #ffffff; }
 
+.page-body--no-scroll {
+  height: 100vh;
+  overflow: hidden; }
+
 .button {
   display: inline-block;
   vertical-align: middle;
@@ -67,12 +71,6 @@ img {
   padding: 21px;
   box-sizing: border-box;
   transform: skewX(-17deg);
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 150%;
-  text-transform: uppercase;
-  text-align: center;
-  color: #ffffff;
   background-color: #c2ab81;
   border: none;
   box-shadow: 6px 0 #131313, 12px 0 #ffffff; }
@@ -82,7 +80,25 @@ img {
 
 .button span {
   display: block;
-  transform: skewX(17deg); }
+  transform: skewX(17deg);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 150%;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff; }
+
+/*=============СТАЙЛГАЙД============*/
+.button:hover {
+  background-color: rgba(194, 171, 129, 0.9); }
+
+.button:focus {
+  outline: 2px solid #c2ab81;
+  outline-offset: 3px; }
+
+.button:active {
+  outline: none;
+  opacity: 0.5; }
 
 .page-header {
   width: 100%;
@@ -91,10 +107,10 @@ img {
   box-sizing: border-box; }
   @media (max-width: 1023px) {
     .page-header {
-      padding: 30px 50px; } }
+      padding: 30px 47px; } }
   @media (max-width: 767px) {
     .page-header {
-      padding: 5px 15px; } }
+      padding: 5px 12px; } }
 
 .page-header__navigation {
   display: flex;
@@ -113,7 +129,8 @@ img {
     .page-header__wrapper-top {
       display: flex;
       width: 100%;
-      margin-bottom: 22px; } }
+      margin-bottom: 22px;
+      padding: 0 3px; } }
   @media (max-width: 767px) {
     .page-header__wrapper-top {
       margin-bottom: 6px;
@@ -121,23 +138,34 @@ img {
       align-items: center;
       margin-right: 0; } }
 
+@media (max-width: 1023px) {
+  .page-header__wrapper-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 97px; } }
+  @media (max-width: 1023px) and (max-width: 767px) {
+    .page-header__wrapper-button {
+      margin-right: 0; } }
+
 .page-header__button {
   display: none; }
   @media (max-width: 1023px) {
     .page-header__button {
       display: block;
-      margin-right: 97px;
       padding: 0;
       background-color: transparent;
       border: none;
       cursor: pointer; } }
-  @media (max-width: 767px) {
-    .page-header__button {
-      margin-right: 0; } }
 
 @media (max-width: 1023px) {
   .page-header--nojs .page-header__button {
     display: none; } }
+
+.page-header__button svg {
+  width: 30px;
+  height: 18px;
+  fill: #ffffff; }
 
 .page-header__logo-link img {
   width: 156px;
@@ -156,10 +184,21 @@ img {
     .page-header__wrapper-list {
       flex-wrap: wrap;
       width: 100%;
+      padding: 0 3px;
       padding-top: 54px; } }
   @media (max-width: 767px) {
     .page-header__wrapper-list {
-      padding-top: 0; } }
+      padding: 0 3px; } }
+
+@media (max-width: 1023px) {
+  .page-header--opened .page-header__wrapper-list {
+    display: block;
+    height: calc(100vh - 112px);
+    overflow-y: auto; } }
+
+@media (max-width: 767px) {
+  .page-header--opened .page-header__wrapper-list {
+    height: calc(100vh - 71px); } }
 
 .page-header__list-navigation-site {
   margin: 0;
@@ -189,7 +228,7 @@ img {
 
 @media (max-width: 1023px) {
   .page-header--opened .page-header__list-navigation-site {
-    display: block; } }
+    display: flex; } }
 
 @media (max-width: 1023px) {
   .page-header--nojs .page-header__list-navigation-site {
@@ -224,7 +263,7 @@ img {
       top: 0;
       right: 0;
       flex-wrap: nowrap;
-      width: 293px; } }
+      width: 313px; } }
   @media (max-width: 767px) {
     .page-header__list-navigation-user {
       position: static;
@@ -238,11 +277,11 @@ img {
 
 @media (max-width: 767px) {
   .page-header--opened .page-header__list-navigation-user {
-    display: block; } }
+    display: flex; } }
 
 @media (max-width: 767px) {
   .page-header--nojs .page-header__list-navigation-user {
-    display: block; } }
+    display: flex; } }
 
 .page-header__item-navigation-user--phone {
   width: 76px;
@@ -255,10 +294,9 @@ img {
       margin-left: 9%; } }
   @media (max-width: 767px) {
     .page-header__item-navigation-user--phone {
-      width: 95%;
+      width: 93.5%;
       margin-right: 0;
-      margin-left: 15px;
-      margin-bottom: 6px; } }
+      margin-left: 0; } }
 
 .page-header__item-navigation-user--phone span {
   display: none; }
@@ -280,14 +318,40 @@ img {
   left: 50%;
   transform: translate(-50%, -50%) skewX(17deg);
   width: 20px;
-  height: 20px; }
+  height: 20px;
+  fill: #ffffff; }
 
 .page-header__item-navigation-user--request {
-  width: 370px; }
+  width: 280px;
+  margin-right: 20px; }
   @media (max-width: 1023px) {
     .page-header__item-navigation-user--request {
-      width: 185px; } }
+      width: 185px;
+      margin-right: 20px; } }
   @media (max-width: 767px) {
     .page-header__item-navigation-user--request {
-      width: 95%;
-      margin-left: 15px; } }
+      width: 93.5%;
+      margin-right: 0; } }
+
+/*=============СТАЙЛГАЙД============*/
+.page-header__link-navigation-site:hover {
+  color: #c2ab81; }
+
+.page-header__link-navigation-user--phone:hover {
+  border: 1px solid #c2ab81; }
+
+.page-header__link-navigation-user--phone:hover svg,
+.page-header__button:hover svg {
+  fill: #c2ab81; }
+
+.page-header__link-navigation-site:focus,
+.page-header__link-navigation-user--phone:focus,
+.page-header__button:focus {
+  outline: 2px solid #c2ab81;
+  outline-offset: 2px; }
+
+.page-header__link-navigation-site:active,
+.page-header__link-navigation-user--phone:active,
+.page-header__button:active {
+  outline: none;
+  opacity: 0.5; }
