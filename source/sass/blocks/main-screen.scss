@@ -1,7 +1,5 @@
 //Слайды
 .main-screen__list-slides {
-  position: relative;
-
   @include reset-style-list;
 }
 
@@ -18,12 +16,17 @@
 
   @media (max-width: $tablet-max-width) {
     padding-top: 150px;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
   }
 }
 
 .main-screen__item-slide--active {
   display: block;
+}
+
+.main-screen__item-slide--nojs {
+  display: block;
+  margin-bottom: 30px;
 }
 
 .main-screen__item-slide h3 {
@@ -149,24 +152,48 @@
 }
 
 //Кнопки переключения слайдов
+.main-screen__wrapper-list-buttons {
+  position: relative;
+
+  max-width: 1920px;
+  width: 100%;
+  padding: 0 5.2%;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  @media (max-width: $tablet-max-width) {
+    padding: 0 50px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding: 0 15px;
+  }
+}
+
 .main-screen__list-buttons {
   @include reset-style-list;
 
   position: absolute;
-  top: 890px;
+  top: 771px;
   right: 5.2%;
 
-  width: 90px;
+  width: 119px;
 
   text-align: end;
 
   @media (max-width: $tablet-max-width) {
     top: 390px;
+    right: 50px;
   }
 
   @media (max-width: $mobile-max-width) {
-    top: 120px;
+    top: 50px;
+    right: 15px;
   }
+}
+
+.main-screen__list-buttons--nojs {
+  display: none;
 }
 
 .main-screen__item-button {

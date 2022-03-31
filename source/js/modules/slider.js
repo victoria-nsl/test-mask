@@ -6,6 +6,13 @@ if ( blockSlides) {
   const buttonsSlides = blockSlides.querySelectorAll('.main-screen__button');
   const slides = blockSlides.querySelectorAll('.main-screen__item-slide');
 
+
+  listButtons.classList.remove('main-screen__list-buttons--nojs');
+  slides.forEach((slide) => {
+    slide.classList.remove('main-screen__item-slide--nojs');
+  });
+
+
   const onButtonSlideClick = (evt) => {
     if (evt.target.tagName === 'BUTTON') {
 

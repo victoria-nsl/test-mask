@@ -101,8 +101,26 @@
     <section class="main-screen">
       <h2 class="visually-hidden">Главный экран</h2>
 
+      <!-- main-screen__list-buttons--nojs - кнопки не видны при отключенном js
+        main-screen__button--active - кнопка на текущем слайде (жирный шрифт)-->
+      <div class="main-screen__wrapper-list-buttons">
+        <ul class="main-screen__list-buttons main-screen__list-buttons--nojs">
+          <li class="main-screen__item-button">
+            <button class="main-screen__button main-screen__button--active" type="button"> DOgie coin </button>
+          </li>
+          <li class="main-screen__item-button">
+            <button class="main-screen__button" type="button"> Упал </button>
+          </li>
+          <li class="main-screen__item-button">
+            <button class="main-screen__button" type="button"> Возвращение </button>
+          </li>
+        </ul>
+      </div>
+
+       <!-- main-screen__item-slide--nojs - все слайды видны при отключенном js
+        main-screen__item-slide--active - текущий слайд-->
       <ul class="main-screen__list-slides">
-        <li class="main-screen__item-slide  main-screen__item-slide--active main-screen__item-slide--flight">
+        <li class="main-screen__item-slide  main-screen__item-slide--active  main-screen__item-slide--nojs main-screen__item-slide--flight">
           <div class="main-screen__inner-item">
             <h3>Полет Илона Маска и DOGIE COIN</h3>
             <p>В прошлый четверг все офигели от полета DOGIE COIN на марс.</p>
@@ -111,7 +129,7 @@
             </a>
           </div>
         </li>
-        <li class="main-screen__item-slide main-screen__item-slide--fall">
+        <li class="main-screen__item-slide main-screen__item-slide--nojs main-screen__item-slide--fall">
           <div class="main-screen__inner-item">
             <h3>DOGIE COIN УПАЛ</h3>
             <p>Все в шоке, я потерял все деньги</p>
@@ -120,7 +138,7 @@
             </a>
           </div>
         </li>
-        <li class="main-screen__item-slide main-screen__item-slide--back">
+        <li class="main-screen__item-slide main-screen__item-slide--nojs main-screen__item-slide--back">
           <div class="main-screen__inner-item">
             <h3>Эпическое возвращения на хаи</h3>
             <p>Все в шоке, я снова богат</p>
@@ -131,17 +149,6 @@
         </li>
       </ul>
 
-      <ul class="main-screen__list-buttons">
-        <li class="main-screen__item-button">
-          <button class="main-screen__button main-screen__button--active" type="button"> DOgie coin </button>
-        </li>
-        <li class="main-screen__item-button">
-          <button class="main-screen__button" type="button"> Упал </button>
-        </li>
-        <li class="main-screen__item-button">
-          <button class="main-screen__button" type="button"> Возвращение </button>
-        </li>
-      </ul>
     </section>
 
   </main>
