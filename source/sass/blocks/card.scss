@@ -1,0 +1,204 @@
+.card {
+  max-width: 1902px;
+  width: 100%;
+  padding: 28px 91px;
+  margin: 0 auto;
+  margin-bottom: 256px;
+  box-sizing: border-box;
+
+  text-align: center;
+
+  @media (max-width: $tablet-max-width) {
+    padding: 30px 50px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding: 5px 15px;
+  }
+}
+
+.card h2 {
+  margin: 0;
+  margin-bottom: 50px;
+
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 51px;
+  text-transform: uppercase;
+  text-align: start;
+}
+
+//Список карточек
+.card__list {
+  @include reset-style-list;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 30px;
+  row-gap: 30px;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+
+//Карточка
+.card__item {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  min-height: 100%;
+  width: 320px;
+  padding-bottom: 28px;
+
+  text-align: start;
+
+  background-color: $white;
+
+  @media (max-width: $tablet-max-width) {
+    width: 45%;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    width: 100%;
+    padding-bottom: 25px;
+  }
+}
+
+.card__wrapper-img {
+  margin-bottom: 20px;
+
+  @media (max-width: $tablet-max-width) {
+    position: relative;
+
+    padding-top: 57.8%;
+  }
+}
+
+.card__wrapper-img img {
+  width: 320px;
+  height: 185px;
+
+  @media (max-width: $tablet-max-width) {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.card__wrapper-text {
+  padding: 0 24px;
+  color: $black-text;
+}
+
+.card__wrapper-text h3 {
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 26px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.card__wrapper-feedback {
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.card__wrapper-feedback p:nth-child(1) {
+  width: 90%;
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.card__wrapper-feedback p:nth-child(2) {
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: $grey-text;
+}
+
+.card__feedback-author {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+  color: $grey-text;
+}
+
+.card__feedback-name {
+  font-weight: 700;
+}
+
+.card__link {
+  display: inline-block;
+  vertical-align: middle;
+  width: 272px;
+  margin: 0 auto;
+  padding: 17px;
+  box-sizing: border-box;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: $white;
+  text-align: center;
+
+  background-color: $black-text;
+
+  @media (max-width: $tablet-max-width) {
+    width: 85%;
+  }
+}
+
+//Кнопка Загрузить еще
+.card__wrapper-button {
+  @media (max-width: $mobile-max-width) {
+    padding: 0 15px;
+  }
+}
+
+.card__button-upload {
+  width: 280px;
+
+  @media (max-width: $tablet-max-width) {
+    width: 185px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    width: 93.5%;
+    margin-left: 3.25%;
+  }
+}
+
+/*=============СТАЙЛГАЙД============*/
+//hover
+.card__link:hover {
+  opacity: 0.9;
+}
+
+//focus
+
+.card__link:focus {
+  outline: 2px solid $brown-ligth;
+  outline-offset: 2px;
+}
+
+//active
+
+.card__link:active {
+  outline: none;
+  opacity: 0.5;
+}

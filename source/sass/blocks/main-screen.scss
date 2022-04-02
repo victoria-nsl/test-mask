@@ -1,3 +1,7 @@
+.main-screen {
+  margin-bottom: 35px;
+}
+
 //Слайды
 .main-screen__list-slides {
   @include reset-style-list;
@@ -5,11 +9,13 @@
 
 .main-screen__item-slide {
   display: none;
+  min-height: 266px;
   padding-top: 598px;
   padding-bottom: 170px;
 
   background-color: $black;
   background-repeat: no-repeat;
+  background-position: center top;
   background-size: cover;
   border-top-left-radius: 60px;
   border-top-right-radius: 60px;
