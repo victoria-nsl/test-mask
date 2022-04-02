@@ -485,6 +485,47 @@
   <footer class="page-footer">
 
   </footer>
+  <section class="modal-request">
+    <div class="modal-request__inner">
+      <div class="modal-request__card">
+        <h2>
+          Оставьте заявку
+        </h2>
+        <p>
+          Оставьте заявку и наш менеджер свяжется с вами
+          в течение 10 -15 минут
+        </p>
+        <button class="modal-request__button" type="button" aria-label="Открыть/закрыть модальное окно"> X </button>
+        <form class="modal-request__form" action="https://echo.htmlacademy.ru/" method="post" target="_blank">
+          <ul class="modal-request__list">
+            <li class="modal-request__item">
+              <label class="visually-hidden" for="customer-name">Имя</label>
+              <input id="customer-name" type="text" name="customer-name" placeholder="Ваше имя*" pattern="^[A-Za-zА-Яа-яЁё\s]+$" required="">
+            </li>
+            <li class="modal-request__item">
+              <label class="visually-hidden" for="e-mail">email</label>
+              <input id="e-mail" type="email" name="email" placeholder="E-mail*" required="">
+            </li>
+            <li class="modal-request__item">
+              <label class="visually-hidden" for="telephone">Телефон</label>
+              <input id="telephone" type="tel" name="tel" placeholder="+7(__)" minlength="18">
+            </li>
+            <li class="modal-request__item">
+              <label class="visually-hidden" for="question">Текст вопроса</label>
+              <textarea id="question" name="question" placeholder="Ваш вопрос*" required=""></textarea>
+            </li>
+          </ul>
+          <button class="modal-request__button button" type="submit">
+            Оставить заявку
+          </button>
+          <p>Нажимая на кнопку “Оставить заявку” вы соглашаетесь с
+            <a class="modal-request__link" href="#">“Пользовательским соглашением”</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <script type="module" src="js/main.js"></script>
 </body>
 
