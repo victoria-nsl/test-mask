@@ -86,7 +86,7 @@
             </a>
           </li>
           <li class="page-header__item-navigation-user page-header__item-navigation-user--request">
-            <a class="page-header__link-navigation-user page-header__link-navigation-user--request  button" href="request.html">
+            <a class="page-header__link-navigation-user page-header__link-navigation-user--request  button" href="request.html" data-request="">
               <span>Оставить заявку</span>
             </a>
           </li>
@@ -124,7 +124,7 @@
           <div class="main-screen__inner-item">
             <h3>Полет Илона Маска и DOGIE COIN</h3>
             <p>В прошлый четверг все офигели от полета DOGIE COIN на марс.</p>
-            <a class="main-screen__link-slide  button" href="request.html">
+            <a class="main-screen__link-slide  button" href="request.html" data-request="">
               <span>Оставить заявку</span>
             </a>
           </div>
@@ -133,7 +133,7 @@
           <div class="main-screen__inner-item">
             <h3>DOGIE COIN УПАЛ</h3>
             <p>Все в шоке, я потерял все деньги</p>
-            <a class="main-screen__link-slide  button" href="request.html">
+            <a class="main-screen__link-slide  button" href="request.html" data-request="">
               <span>Оставить заявку</span>
             </a>
           </div>
@@ -142,7 +142,7 @@
           <div class="main-screen__inner-item">
             <h3>Эпическое возвращения на хаи</h3>
             <p>Все в шоке, я снова богат</p>
-            <a class="main-screen__link-slide  button" href="request.html">
+            <a class="main-screen__link-slide  button" href="request.html" data-request="">
               <span>Оставить заявку</span>
             </a>
           </div>
@@ -487,15 +487,16 @@
   </footer>
   <section class="modal-request">
     <div class="modal-request__inner">
+      <div class="modal-request__wrapper-image"></div>
       <div class="modal-request__card">
         <h2>
           Оставьте заявку
         </h2>
         <p>
           Оставьте заявку и наш менеджер свяжется с вами
-          в течение 10 -15 минут
+          в&nbsp;течение 10 -15 минут
         </p>
-        <button class="modal-request__button" type="button" aria-label="Открыть/закрыть модальное окно"> X </button>
+
         <form class="modal-request__form" action="https://echo.htmlacademy.ru/" method="post" target="_blank">
           <ul class="modal-request__list">
             <li class="modal-request__item">
@@ -515,13 +516,18 @@
               <textarea id="question" name="question" placeholder="Ваш вопрос*" required=""></textarea>
             </li>
           </ul>
-          <button class="modal-request__button button" type="submit">
-            Оставить заявку
-          </button>
-          <p>Нажимая на кнопку “Оставить заявку” вы соглашаетесь с
-            <a class="modal-request__link" href="#">“Пользовательским соглашением”</a>
-          </p>
+          <div class="modal-request__wrapper-button-text">
+            <div class="modal-request__wrapper-button">
+              <button class="modal-request__button button" type="submit">
+                <span>Отправить заявку</span>
+              </button>
+            </div>
+            <p>Нажимая на кнопку “Отправить заявку” вы соглашаетесь<br>
+              <a class="modal-request__link" href="#">с “Пользовательским соглашением”</a>
+            </p>
+          </div>
         </form>
+        <button class="modal-request__button-close" type="button" aria-label="Открыть/закрыть модальное окно"> </button>
       </div>
     </div>
   </section>

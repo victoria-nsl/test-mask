@@ -4,14 +4,17 @@
   width: 100%;
   padding: 21px;
   box-sizing: border-box;
-  transform: skewX(-17deg);
+  transform: translateX(10px) skewX(-17deg);
 
   background-color: $brown-ligth;
   border: none;
   box-shadow: 6px 0 $black-basis, 12px 0 $white;
 
+  cursor: pointer;
+
   @media (max-width: $mobile-max-width) {
     box-shadow: none;
+    transform: skewX(-17deg);
   }
 }
 
