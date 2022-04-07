@@ -17,6 +17,11 @@
   display: block;
 }
 
+.modal-request--page {
+  position: static;
+  display: block;
+}
+
 .modal-request__inner {
   position: absolute;
   top: 50%;
@@ -165,6 +170,10 @@
 
     height: 30px;
   }
+}
+
+.modal-request--page .modal-request__button-close {
+  display: none;
 }
 
 .modal-request__button-close::after {

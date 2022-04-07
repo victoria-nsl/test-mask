@@ -350,15 +350,20 @@ img {
 .page-header__button:hover svg {
   fill: #c2ab81; }
 
+.page-header__logo-link[href]:hover {
+  opacity: 0.8; }
+
 .page-header__link-navigation-site:focus,
 .page-header__link-navigation-user--phone:focus,
-.page-header__button:focus {
+.page-header__button:focus,
+.page-header__logo-link[href]:focus {
   outline: 2px solid #c2ab81;
   outline-offset: 2px; }
 
 .page-header__link-navigation-site:active,
 .page-header__link-navigation-user--phone:active,
-.page-header__button:active {
+.page-header__button:active,
+.page-header__logo-link[href]:active {
   outline: none;
   opacity: 0.5; }
 
@@ -734,6 +739,10 @@ img {
 .modal-request--opened {
   display: block; }
 
+.modal-request--page {
+  position: static;
+  display: block; }
+
 .modal-request__inner {
   position: absolute;
   top: 50%;
@@ -847,6 +856,9 @@ img {
       top: 30px;
       right: 3.4%;
       height: 30px; } }
+
+.modal-request--page .modal-request__button-close {
+  display: none; }
 
 .modal-request__button-close::after {
   content: "";

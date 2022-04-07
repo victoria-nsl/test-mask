@@ -321,10 +321,15 @@
   fill: $brown-ligth;
 }
 
+.page-header__logo-link[href]:hover {
+  opacity: 0.8;
+}
+
 //focus
 .page-header__link-navigation-site:focus,
 .page-header__link-navigation-user--phone:focus,
-.page-header__button:focus {
+.page-header__button:focus,
+.page-header__logo-link[href]:focus {
   outline: 2px solid $brown-ligth;
   outline-offset: 2px;
 }
@@ -332,7 +337,8 @@
 //active
 .page-header__link-navigation-site:active,
 .page-header__link-navigation-user--phone:active,
-.page-header__button:active {
+.page-header__button:active,
+.page-header__logo-link[href]:active {
   outline: none;
   opacity: 0.5;
 }

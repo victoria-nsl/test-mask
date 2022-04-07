@@ -91,7 +91,7 @@ if(form) {
       });
 
       showPopup(popupError, buttonClosePopupError);
-    //у поля появляется красная рамка, если оно не заполнено и показывается сообщение, что форма не отправлена. Pаботает если только в разметке не указано required у обязательных полей формы
+
     }  else {
       if(isStorageSupport) {
         localStorage.setItem('name', inputName.value);
@@ -104,6 +104,10 @@ if(form) {
       page.classList.add('page-body--no-scroll');
     }
   };
+
+  //Изначально удаляем атрибут required, чтобы при отправке формы у поля появлялась красная рамка, если оно не заполнено и показывалось  сообщение, что форма не отправлена.
+  fieldsRequired.forEach((fieldRequired) => fieldRequired.required = false);
+
   //Удаление класса ошибки при заполнении поля(удаление красной рамки) и снятии фокуса с поля
   fieldsRequired.forEach((fieldRequired) => {
     fieldRequired.addEventListener('blur', () => {

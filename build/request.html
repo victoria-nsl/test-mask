@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Полет Илона Маска">
+  <title>Тестовое задание: Полет Илона Маска</title>
+  <link rel="preload" href="fonts/montserrat-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/montserrat-semibold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body class="page-body">
+  <header class="page-header page-header--request">
+    <a class="page-header__logo-link" href="index.html">
+      <picture>
+        <source media="(max-width: 767px)" srcset="img/logotype-mobile.svg">
+        <img src="img/logotype.svg" width="156" height="60" alt="Логотип компании Magwai">
+      </picture>
+    </a>
+  </header>
+  <main class="page-main page-main--request">
+    <section class="modal-request modal-request--page">
+      <div class="modal-request__inner">
+        <div class="modal-request__wrapper-image"></div>
+        <div class="modal-request__card">
+          <h2>
+            Оставьте заявку
+          </h2>
+          <p>
+            Оставьте заявку и наш менеджер свяжется с вами
+            в&nbsp;течение 10 -15 минут
+          </p>
+
+          <form class="modal-request__form" action="https://echo.htmlacademy.ru/" method="post" target="_blank">
+            <ul class="modal-request__list">
+              <li class="modal-request__item">
+                <label class="visually-hidden" for="customer-name">Имя</label>
+                <input id="customer-name" type="text" name="customer-name" placeholder="Ваше имя*" pattern="^[A-Za-zА-Яа-яЁё\s]+$" data-required="" required="">
+              </li>
+              <li class="modal-request__item">
+                <label class="visually-hidden" for="e-mail">email</label>
+                <input id="e-mail" type="email" name="email" placeholder="E-mail*" data-required="" required="">
+              </li>
+              <li class="modal-request__item">
+                <label class="visually-hidden" for="telephone">Телефон</label>
+                <input id="telephone" type="tel" name="tel" placeholder="+7(__)" minlength="18" maxlength="18">
+              </li>
+              <li class="modal-request__item">
+                <label class="visually-hidden" for="question">Текст вопроса</label>
+                <textarea id="question" name="question" placeholder="Ваш вопрос*" data-required="" required=""></textarea>
+              </li>
+            </ul>
+            <div class="modal-request__wrapper-button-text">
+              <div class="modal-request__wrapper-button">
+                <button class="modal-request__button button" type="submit">
+                  <span>Отправить</span>
+                </button>
+              </div>
+              <p>Нажимая на кнопку “Отправить заявку” вы соглашаетесь<br>
+                <a class="modal-request__link" href="#">с “Пользовательским соглашением”</a>
+              </p>
+            </div>
+          </form>
+          <button class="modal-request__button-close" type="button" aria-label="Открыть/закрыть модальное окно">
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <footer class="page-footer">
+
+  </footer>
+  <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
