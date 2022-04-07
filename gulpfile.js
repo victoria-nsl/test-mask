@@ -79,6 +79,7 @@ gulp.task('copy', () => gulp.src([
   'source/img/**',
   'source/js/**',
   'source//*.ico',
+  'source//manifest.webmanifest',
 ], {
   base: 'source',
 })

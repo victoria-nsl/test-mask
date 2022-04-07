@@ -3,6 +3,10 @@
   color: $white;
 }
 
+.page-body--request {
+  background-color: $black-page;
+}
+
 .page-body--no-scroll {
   height: 100vh;
   overflow: hidden;
