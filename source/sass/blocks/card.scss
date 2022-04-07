@@ -64,6 +64,10 @@
   }
 }
 
+.card__item--hidden {
+  display: none;
+}
+
 .card__wrapper-img {
   margin-bottom: 20px;
 
@@ -201,4 +205,9 @@
 .card__link:active {
   outline: none;
   opacity: 0.5;
+}
+
+//disabled
+.card__button-upload:disabled {
+  opacity: 0.2;
 }
