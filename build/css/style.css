@@ -319,11 +319,17 @@ img {
   display: inline-block;
   vertical-align: middle;
   width: 100%;
-  height: 60px;
+  padding: 30px;
   box-sizing: border-box;
-  transform: translateX(10px) skewX(-17deg);
+  transform: skewX(-17deg);
   background-color: transparent;
   border: 1px solid #ffffff; }
+  @media (max-width: 1023px) {
+    .page-header__link-navigation-user--phone {
+      padding: 24px; } }
+  @media (max-width: 767px) {
+    .page-header__link-navigation-user--phone {
+      padding: 19px; } }
 
 .page-header__link-navigation-user--phone svg {
   position: absolute;
@@ -760,9 +766,9 @@ img {
 
 .modal-request__inner {
   position: absolute;
-  top: 50%;
+  top: 110px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   display: flex;
   max-width: 1747px;
   width: 100%;

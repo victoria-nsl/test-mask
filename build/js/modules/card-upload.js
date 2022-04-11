@@ -35,5 +35,3 @@ if (blockCards) {
   buttonUpload.addEventListener(('click'), onButtonUploadClick);
 
 }
-
-
