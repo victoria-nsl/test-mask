@@ -1,4 +1,4 @@
-const {src, dest, watch, series} = require('gulp');
+const {src, dest, watch, series, parallel} = require('gulp');
 const plumber = require('gulp-plumber');
 const sourcemap = require('gulp-sourcemaps');
 const sass = require('gulp-sass');
@@ -89,7 +89,7 @@ function copy () {
     'source/img/**',
     'source/js/**',
     'source//*.ico',
-    'source//manifest.webmanifest',
+    'source/manifest.webmanifest',
   ], {
     base: 'source',
   })
@@ -106,7 +106,7 @@ function clean () {
 exports.clean = clean;
 
 //Локальный сервер и watch
-function server() {
+function server(done) {
   sync.init({
     server: 'build/',
     notify: false,
@@ -114,14 +114,18 @@ function server() {
     cors: true,
     ui: false,
   });
+  done();
+}
 
+exports.server = server;
+
+//Отследивание изменений
+function watcher() {
   watch('source/sass/**/*.{scss,sass}', series(css));
   watch('source/img/icon-*.svg', series(sprite, html, refresh));
   watch('source/*.html', series(html, refresh));
   watch('source/js/**/*.js', series(scripts, refresh));
 }
-
-exports.server = server;
 
 //Перезагрузка сервера
 function refresh(done) {
@@ -132,5 +136,5 @@ function refresh(done) {
 exports.refresh = refresh;
 
 //npm start, npm build
-exports.build = series(clean,images,createWebp, copy, css, sprite,  html );
-exports.start  = series(clean,images, createWebp, copy, css, sprite,  html, server);
+exports.build = series(clean, copy, images, parallel(html, css, sprite, createWebp));
+exports.start  = series(clean, copy, parallel(html, css, sprite, createWebp), series(server, watcher));
